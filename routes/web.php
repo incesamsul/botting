@@ -30,7 +30,7 @@ Route::get('/logout', [LoginController::class, 'logout']);
 Route::get('/', [Home::class, 'beranda']);
 Route::get('/katalog/{id_percetakan}', [Home::class, 'katalog']);
 
-
+Route::get('/preview/{nama_tema}', [Home::class, 'preview']);
 Route::get('/tentang_aplikasi', [Home::class, 'tentangAplikasi']);
 
 
@@ -62,6 +62,7 @@ Route::group(['middleware' => ['auth', 'ceklevel:Administrator']], function () {
         Route::get('/pengguna', [Admin::class, 'pengguna']);
         Route::get('/fetch_data', [Admin::class, 'fetchData']);
         Route::get('/tema', [Admin::class, 'tema']);
+        Route::post('/create_tema', [Admin::class, 'createTema']);
 
 
         // CRUD PENGGUNA

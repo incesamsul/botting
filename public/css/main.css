@@ -317,6 +317,15 @@ table tr * {
     animation-fill-mode: forwards;
 }
 
+.theme-card:hover {
+    cursor: pointer;
+    box-shadow: 0px 0.7px 3.6px rgba(0, 0, 0, 0.017), 0px 1.9px 10px rgba(0, 0, 0, 0.025), 0px 4.5px 24.1px rgba(0, 0, 0, 0.033), 0px 15px 80px rgba(0, 0, 0, 0.05)
+}
+
+.theme-card {
+    border-radius: 20px !important;
+}
+
 @keyframes fadeOut {
     100% {
         opacity: 0;

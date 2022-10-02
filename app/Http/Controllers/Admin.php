@@ -37,7 +37,20 @@ class Admin extends Controller
     }
 
 
+    public function createTema(Request $request){
 
+        $thumbnailTema = uniqid() . '.jpg';
+
+        $request->thumbnail_tema->move(public_path('data/tema/'), $thumbnailTema);
+
+        Tema::create([
+            'nama_tema' => $request->nama_tema,
+            'thumbnail_tema' => $thumbnailTema
+        ]);
+
+        return redirect()->back()->with('message','berhsil disimpan');
+
+    }
 
 
 

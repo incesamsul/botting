@@ -20,6 +20,10 @@ function removeSpace($string)
     return str_replace(" ", "", $string);
 }
 
+function spaceToUnderscore($string){
+    return strtolower(str_replace(" ", "_", $string));
+}
+
 function getUserRoleName($userRoleId)
 {
     return DB::table('users')

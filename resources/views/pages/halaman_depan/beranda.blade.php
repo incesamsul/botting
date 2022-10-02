@@ -323,60 +323,19 @@
                 <p class="text-center text-secondary">Pilih berbagai tema menarik yang siap pakai</p>
             </div>
             <div class="row mt-5">
+            @foreach($tema as $row)
                 <div class="col-sm-4">
                     <div class="card theme-card border-0">
-                        <img src="{{ asset('images/tema_thumnail/Aesthetic.png') }}" alt="">
+                        <img src="{{ asset('data/tema/' . $row->thumbnail_tema) }}" alt="">
                         <div class="caption d-flex flex-row justify-content-between p-4 align-items-center">
-                            <h4>Aesthetic</h4>
-                            <i class="fa-regular fa-paper-plane "></i>
+                            <h4>{{ $row->nama_tema }}</h4>
+                            <a href="{{ URL::to('/preview/' . spaceToUnderscore($row->nama_tema)) }}">
+                            <i class="fas fa-paper-plane "></i>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4">
-                    <div class="card theme-card border-0">
-                        <img src="{{ asset('images/tema_thumnail/elegant blue.png') }}" alt="">
-                        <div class="caption d-flex flex-row justify-content-between p-4 align-items-center">
-                            <h4>Elegeant blue</h4>
-                            <i class="fa-regular fa-paper-plane "></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="card theme-card border-0">
-                        <img src="{{ asset('images/tema_thumnail/elegant cream.png') }}" alt="">
-                        <div class="caption d-flex flex-row justify-content-between p-4 align-items-center">
-                            <h4>Elegant cream</h4>
-                            <i class="fa-regular fa-paper-plane "></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4 mt-4">
-                    <div class="card theme-card border-0">
-                        <img src="{{ asset('images/tema_thumnail/elegant navy gold.png') }}" alt="">
-                        <div class="caption d-flex flex-row justify-content-between p-4 align-items-center">
-                            <h4>Elegant navy gold</h4>
-                            <i class="fa-regular fa-paper-plane "></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4 mt-4">
-                    <div class="card theme-card border-0">
-                        <img src="{{ asset('images/tema_thumnail/summer.png') }}" alt="">
-                        <div class="caption d-flex flex-row justify-content-between p-4 align-items-center">
-                            <h4>Summer</h4>
-                            <i class="fa-regular fa-paper-plane "></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4 mt-4">
-                    <div class="card theme-card border-0">
-                        <img src="{{ asset('images/tema_thumnail/sweet purple.png') }}" alt="">
-                        <div class="caption d-flex flex-row justify-content-between p-4 align-items-center">
-                            <h4>Sweet purple</h4>
-                            <i class="fa-regular fa-paper-plane "></i>
-                        </div>
-                    </div>
-                </div>
+            @endforeach
             </div>
             <div class="row my-5">
                 <div class="col-sm-12 text-center">
