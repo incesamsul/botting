@@ -5,9 +5,9 @@ use App\Http\Controllers\Auth\LoginController;
 
 use App\Http\Controllers\General;
 use App\Http\Controllers\Home;
+use App\Http\Controllers\TemaUser;
 
-use App\Http\Controllers\Penilai;
-use App\Http\Controllers\Percetakan;
+use App\Http\Controllers\Pelanggan;
 use App\Http\Controllers\UserController;
 
 use Illuminate\Support\Facades\Route;
@@ -75,6 +75,11 @@ Route::group(['middleware' => ['auth', 'ceklevel:Administrator']], function () {
 
 // PERCETAKAN ROUTE
 Route::group(['middleware' => ['auth', 'ceklevel:pelanggan']], function () {
+    Route::get('/{domain}', [Pelanggan::class, 'undangan']);
     Route::group(['prefix' => 'pelanggan'], function () {
+        Route::get('/tema', [Pelanggan::class, 'tema']);
+        Route::get('/publish', [Pelanggan::class, 'publish']);
+        Route::get('/pilih_tema/{id_tema}', [TemaUser::class, 'store']);
+        Route::post('/simpan_domain', [Pelanggan::class, 'simpanDomain']);
     });
 });

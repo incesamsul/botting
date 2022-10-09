@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\DB;
+use App\Models\TemaUser;
 
 class User extends Authenticatable
 {
@@ -38,22 +39,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function percetakan()
+    public function temaUser()
     {
-        return $this->belongsTo(Percetakan::class, 'id', 'id_user');
+        return $this->hasOne(TemaUser::class, 'id_user', 'id');
     }
 
-    public function getAllUser()
-    {
-        return DB::table('users')
-            ->paginate(5);
-    }
-
-    public function getUserProfile($idUser)
-    {
-        return DB::table('users')
-            ->join('profile', 'id_user', '=', 'users.id')
-            ->where('id_user', $idUser)
-            ->first();
-    }
 }

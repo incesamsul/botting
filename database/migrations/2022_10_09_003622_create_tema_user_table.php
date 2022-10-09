@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProfileTable extends Migration
+class CreateTemaUserTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,13 @@ class CreateProfileTable extends Migration
      */
     public function up()
     {
-        Schema::create('profile', function (Blueprint $table) {
-            $table->increments('id_profile');
+        Schema::create('tema_user', function (Blueprint $table) {
+            $table->increments('id_tema_user');
             $table->unsignedBigInteger('id_user');
-            $table->enum('jenis_kelamin', ['L', 'P']);
-            $table->string('tempat_lahir', 75);
+            $table->unsignedInteger('id_tema');
             $table->timestamps();
             $table->foreign('id_user')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('id_tema')->references('id_tema')->on('tema')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 
@@ -30,6 +30,6 @@ class CreateProfileTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('profile');
+        Schema::dropIfExists('tema_user');
     }
 }

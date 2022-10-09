@@ -1,14 +1,17 @@
 <?php
 
-use App\Models\FavoritModel;
-use App\Models\KategoriModel;
-use App\Models\LogAktivitasModel;
+use App\Models\TemaUser;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\URL;
 use phpDocumentor\Reflection\Types\Null_;
 use PhpParser\Node\Expr\FuncCall;
 use Illuminate\Support\Str;
 use function PHPUnit\Framework\isNull;
+
+
+function getTemaUser($idUser){
+    return TemaUser::where('id_user',$idUser)->first();
+}
 
 function generateId()
 {

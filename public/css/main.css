@@ -332,3 +332,21 @@ table tr * {
         visibility: hidden;
     }
 }
+
+.active-card {
+    box-shadow: 0px 0.7px 3.6px #39e822, 0px 1.9px 10px #39e822 !important;
+}
+
+.active-card::after {
+    content: '\f058';
+    position: absolute;
+    left: 0;
+    color: #39e822;
+    top: 0;
+    font-family: "Font Awesome 5 Free";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 50px;
+    margin: 0px 0px 0px 10px;
+    text-decoration: none;
+}
