@@ -33,6 +33,8 @@ Route::get('/katalog/{id_percetakan}', [Home::class, 'katalog']);
 Route::get('/preview/{nama_tema}', [Home::class, 'preview']);
 Route::get('/tentang_aplikasi', [Home::class, 'tentangAplikasi']);
 
+Route::get('/old_home', [Home::class, 'oldHome']);
+
 
 Route::group(['middleware' => ['guest']], function () {
     Route::get('/login', [LoginController::class, 'login'])->name('login');

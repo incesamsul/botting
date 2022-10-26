@@ -11,11 +11,17 @@ class Home extends Controller
     public function beranda()
     {
         $data['tema'] = Tema::all();
-        return view('pages.halaman_depan.beranda',$data);
+        return view('pages.halaman_depan.beranda', $data);
     }
 
-    public function preview($nama_tema){
-        return view('pages.halaman_depan.preview.'.$nama_tema);
+    public function oldHome()
+    {
+        $data['tema'] = Tema::all();
+        return view('pages.halaman_depan.beranda_old', $data);
     }
 
+    public function preview($nama_tema)
+    {
+        return view('pages.halaman_depan.preview.' . $nama_tema);
+    }
 }

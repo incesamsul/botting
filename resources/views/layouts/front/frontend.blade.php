@@ -24,12 +24,10 @@
   <link href="{{ asset('bostorek/css/style.css') }}" rel="stylesheet" />
   {{-- home css --}}
   <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/animation.css') }}">
   <!-- responsive style -->
   <link href="{{ asset('bostorek/css/responsive.css') }}" rel="stylesheet" />
-  <link rel="stylesheet" type="text/css" href="{{ asset('css/login.css') }}">
-  {{-- csrf token  --}}
-  <meta name="csrf-token" content="{{ csrf_token() }}" />
-  {{-- sweetalert --}}
+
   <link rel="stylesheet" href="{{ asset('plugins/sweetalert2/sweetalert2.min.css') }}">
 </head>
 
@@ -44,9 +42,9 @@
   <div class="hero_area">
     <!-- header section strats -->
 
-    <header class="header_section " style="background: linear-gradient(to right, #fffbeb, #ebeeff);">
+    <header class="header_section ">
       <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg custom_nav-container pr-4 " style="background: linear-gradient(to right, #fffbeb, #ebeeff);">
+        <nav class="navbar navbar-expand-lg custom_nav-container pr-4 ">
           <a class="navbar-brand ml-5" href="{{ URL::to('/') }}">
             <img src="{{ asset('images/onlylogo.png') }}" alt="" width="90">
             <span>
@@ -83,29 +81,19 @@
             <a class="nav-link my-btn-nav bg-second text-white" href="{{ URL::to('/login') }}">Login</a>
           </div>
         </nav>
-            <!-- bulet bulet -->
-    <div class="bulet bulet1"></div>
-    <div class="bulet bulet2"></div>
-    <div class="bulet bulet3"></div>
-    <div class="bulet bulet4"></div>
-    <div class="bulet bulet5"></div>
-    <div class="bulet bulet6"></div>
-    <div class="bulet bulet7"></div>
-    <div class="bulet bulet8"></div>
-
       </div>
     </header>
     <!-- end header section -->
     @yield('content')
   <!-- footer section -->
-  {{-- <footer class="footer_section" style="background: linear-gradient(to right, #fffbeb, #ebeeff);">
+  <footer class="footer_section">
     <div class="container">
       <p>
         &copy; <span id="displayYear"></span> All Rights Reserved By
         <a href="">tani    </a>
       </p>
     </div>
-  </footer> --}}
+  </footer>
   <!-- footer section -->
   <!-- Sweet Alert -->
   <script src="{{ asset('plugins/sweetalert2/sweetalert2.min.js') }}"></script>
@@ -118,7 +106,7 @@
 
   <script src="{{ asset('plugins/qrcodejs/jquery.min.js') }}"></script>
   <script src="{{ asset('plugins/qrcodejs/qrcode.min.js') }}"></script>
-
+  <script src="{{ asset('js/animation.js') }}"></script>
   @yield('script')
 
 </body>

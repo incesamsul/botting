@@ -4,84 +4,6 @@ body {
     overflow-x: hidden;
 }
 
-nav {
-    display: flex !important;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-left: 80px !important;
-    padding-right: 80px !important;
-    box-sizing: border-box;
-    position: fixed;
-    background-color: white;
-    width: 100vw;
-    z-index: 100;
-}
-
-nav .left-nav ul,
-nav .right-nav ul {
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row !important;
-}
-
-nav .left-nav ul li,
-nav .right-nav ul li {
-    padding: 30px;
-    display: block;
-}
-
-nav .left-nav ul li a,
-nav .right-nav ul li a {
-    text-decoration: none;
-    color: grey;
-    transition: .5s;
-}
-
-nav .left-nav ul li a:hover {
-    color: #00A2E9;
-}
-
-nav ul li.logo {
-    padding: 20px;
-}
-
-#hero {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    height: 100vh;
-}
-
-#hero .slogan {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#hero .image-ilustration {
-    width: 500px;
-    display: flex;
-    justify-content: start;
-    align-items: start;
-    /* background-color: red !important; */
-}
-
-#hero .slogan h1 {
-    font-size: 60px;
-    font-weight: 900;
-    color: rgb(65, 65, 65);
-}
-
-#hero p {
-    margin-top: 40px;
-    font-weight: 300;
-    text-align: justify !important;
-    color: grey;
-}
-
 .text-main {
     color: #00A2E9 !important;
 }
@@ -101,23 +23,26 @@ nav ul li.logo {
     color: #00A2E9 !important;
 }
 
-#why_choose_us {
-    height: 100vh;
-    background: #00a3e90a;
+.bg-odd {
+    background: #F5F6F9;
 }
 
+.bg-even {
+    background: #ffffff;
+}
+
+#why_choose_us {}
+
 #how_to_make {
-    height: 100vh;
-    background: #00a3e90a;
+    /* height: 100vh; */
 }
 
 #pricing {
     /* height: 100vh; */
-    background: #00a3e90a;
 }
 
 #features {
-    height: 100vh;
+    /* height: 100vh; */
     /* background: rgb(252, 252, 252); */
 }
 

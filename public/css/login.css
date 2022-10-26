@@ -33,6 +33,18 @@ ul.menu li a {
     display: flex;
 }
 
+.bg-form {
+    background-color: #E8F0FE;
+}
+
+input::placeholder {
+    font: 10px/3 sans-serif;
+}
+
+input {
+    font-size: 12px !important;
+}
+
 .login-wrapper {
     display: flex;
     align-items: center;
@@ -45,7 +57,7 @@ ul.menu li a {
     background-color: #fff;
     border-radius: 15px;
     padding: 25px;
-    width: 250px;
+    width: 300px;
 }
 
 .register-box {
@@ -193,4 +205,23 @@ ul.menu li a {
 
 .p-20 {
     padding: 20px;
+}
+
+@media (max-width: 420px) {
+    .ilustration-wrapper {
+        display: none;
+    }
+    .bulet {
+        display: none;
+    }
+    .login-wrapper {
+        display: block !important;
+        width: 100vw;
+    }
+    .login-box {
+        border-radius: 30px;
+        background-color: rgba(0, 0, 0, 0.2);
+        width: 100vw;
+        height: 100vh;
+    }
 }

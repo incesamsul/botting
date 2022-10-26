@@ -9,29 +9,35 @@
         <form id="formRegister" action="{{ URL::to('/post_register') }}" method="post">
             @csrf
         <div class="login-box">
-            <h4>Register</h4>
+            <h5 class="pb-3">Register</h5>
             @if (session('fail'))
                 <p class="text-small">{{ session('fail') }}</p>
                 @endif
                 <p class="text-danger text-small" id="error"></p>
                 <div class="form-group">
-                    <input placeholder="nama " type="text" class="form-input" id="name" name="name">
+                    <input placeholder="nama " type="text" class="my-custom-form p-3 border-0 form-control bg-form" id="name" name="name">
                     <div class="text-small" id="errorMessage_name"></div>
                 </div>
                 <div class="form-group">
-                    <input placeholder="email" type="text" class="form-input" id="email" name="email">
+                    <input placeholder="email" type="text" class="my-custom-form p-3 border-0 form-control bg-form" id="email" name="email">
                     <div class="text-small" id="errorMessage_email"></div>
                 </div>
                 <div class="form-group">
-                    <input placeholder="password" type="password" class="form-input" id="password" name="password">
+                    <input placeholder="password" type="password" class="my-custom-form p-3 border-0 form-control bg-form" id="password" name="password">
                     <div class="text-small" id="errorMessage_password"></div>
                 </div>
                 <div class="form-group">
-                    <input placeholder="konfirmasi password" type="password" class="form-input" id="konfirmasi_password" name="konfirmasi_password">
+                    <input placeholder="konfirmasi password" type="password" class="my-custom-form p-3 border-0 form-control bg-form" id="konfirmasi_password" name="konfirmasi_password">
                     <div class="text-small" id="errorMessage_konfirmasi_password"></div>
                 </div>
                 <div class="form-group mt-25">
-                    <button id="btn-register" type="button" class="btn">Register</button>
+                    <button id="btn-register" type="button" class="my-custom-btn border-0 bg-second text-white form-control">Register</button>
+                </div>
+                <div class="caption text-center">
+                    <small>Sudah punya akun ? </small>
+                    <small>
+                        <a href="{{ URL::to('/login') }}">Login</a>
+                    </small>
                 </div>
         </form>
         </div>
