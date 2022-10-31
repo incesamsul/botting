@@ -376,14 +376,15 @@ form {
 }
 
 @media only screen and (max-width: 400px) {
-
-    .sj-book .page{
+    /* .sj-book .p4 {
+        background-image: url(../pics/test.png);
+    } */
+    .sj-book .page {
         position: relative;
-	background-color:white;
-	background-repeat:no-repeat;
-	background-size:100% 100%;
+        background-color: white;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
     }
-
     body {
         background: none;
         height: 100vh;
@@ -395,7 +396,7 @@ form {
         height: 100vh;
     }
     .sj-book {
-        height: 90vh;
+        height: 92vh;
         width: 100vw;
     }
 }

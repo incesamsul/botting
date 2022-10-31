@@ -22,6 +22,10 @@
     />
 </head>
 <body>
+    <audio controls id="soundEffect" hidden>
+        <source src="{{ asset('turnjs/audio/paperslide.wav') }}" type="audio/mpeg">
+      Your browser does not support the audio element.
+      </audio>
 	<div id="canvas">
         <div id="book-zoom">
             <div class="sj-book">
@@ -42,7 +46,7 @@
         <div id="slider-bar" class="turnjs-slider">
             <div id="slider"></div>
         </div>
-        <button onclick="window.location.reload(true);">refresh</button>
+        {{-- <button onclick="window.location.reload(true);">refresh</button> --}}
     </div>
 
 
@@ -59,6 +63,8 @@
                 setTimeout(loadApp, 10);
                 return;
             }
+
+
 
             // Mousewheel
 
@@ -156,6 +162,30 @@
 
             // Arrows
 
+            let touchstartX = 0
+            let touchendX = 0
+
+            function checkDirection() {
+                if (touchendX < touchstartX) {
+                    // alert('swiped left!')
+                    $('.sj-book').turn('next');
+
+                }
+                if (touchendX > touchstartX) {
+                    // alert('swiped right!')
+                    $('.sj-book').turn('previous');
+                }
+            }
+
+            document.addEventListener('touchstart', e => {
+                touchstartX = e.changedTouches[0].screenX
+            })
+
+            document.addEventListener('touchend', e => {
+                touchendX = e.changedTouches[0].screenX
+                checkDirection()
+            })
+
             $(document).keydown(function(e) {
 
                 var previous = 37,
@@ -215,6 +245,9 @@
                 pages: 22,
                 when: {
                     turning: function(e, page, view) {
+
+                        var audio = document.getElementById("soundEffect");
+                        audio.play();
 
                         var book = $(this),
                             currentPage = book.turn('page'),
@@ -338,3 +371,4 @@
 
 </body>
 </html>
+
