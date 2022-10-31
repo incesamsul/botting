@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+.mempelai-wrapper{
+    position: relative;
+    z-index: 10;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mempelai{
+    margin-top: 30px;
+    color: #F9C4C7 !important;
+    font-size: 51px !important;
+    font-family: 'Great Vibes', cursive;
+
+}
+
+.and{
+    color: #F9C4C7 !important;
+    font-size: 71px !important;
+}
+
+.mempelai-img{
+    width: 110px !important;
+    height: 110px !important;
+    border-radius: 50%;
+    margin-top: 78px;
+}
+.mempelai-img-frame{
+    top: 60px;
+    position: absolute;
+    width: 170px !important;
+    height: 170px !important;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+.text-secondary{
+    color: #918985;
+}
+.text-main{
+    color: #F9C4C7;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.mt-5{
+    margin-top: 15px;
+}
+
+.icon{
+    font-size: 50px !important;
+    color: #F9C4C7;
+}
+
+.counter{
+    display: flex;
+}
+
+.counter span{
+    width: 40px;
+    margin-right: 10px;
+    padding: 14px;
+    font-size: 14px;
+    border-radius: 20px;
+    border: 2px solid #F9C4C7;
+    background-color: white;
+    color: #F9C4C7;
+}
+
+.lokasi-wrapper{
+    border: none !important;
+    width: 400px;
+    height: 400px;
+}
+
+

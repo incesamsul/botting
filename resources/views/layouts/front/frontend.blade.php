@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <!-- Mobile Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  
   <!-- Site Metas -->
   <link rel="icon" href="images/favicon.png" type="image/gif" />
   <meta name="keywords" content="" />
@@ -62,13 +63,13 @@
                 <a class="nav-link pl-lg-0" href="{{ URL::to('/') }}">Beranda <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ URL::to('/#tema') }}"> Tema</a>
+                <a class="nav-link" href="{{ URL::to('/#choose_theme') }}"> Tema</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ URL::to('/#portfolio') }}"> Portfolio</a>
+                <a class="nav-link" href="{{ URL::to('/#pricing') }}"> Harga</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ URL::to('/#tentangkami') }}">Tentang kami</a>
+                <a class="nav-link" href="{{ URL::to('/#tentang_kami') }}">Tentang kami</a>
               </li>
 
             </ul>

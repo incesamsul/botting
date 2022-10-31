@@ -225,3 +225,16 @@ input {
         height: 100vh;
     }
 }
+
+@media (min-width: 1580px) {
+    .ilustration-wrapper img{
+        width: 600px;
+        margin-top:80px;
+    }
+    .login-wrapper {
+        margin-top:80px;
+    }
+    .login-box {
+        width: 350px;
+    }
+}

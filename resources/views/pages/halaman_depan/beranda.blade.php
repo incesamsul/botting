@@ -22,7 +22,7 @@
                     praktis, hemat dan modern
                     hehehe hehehe hehehe heheh.
                   </p>
-                  <a href="">
+                  <a href="{{ URL::to('/#pricing') }}">
                     Lebih lanjut
                   </a>
                 </div>
@@ -52,7 +52,7 @@
                         praktis, hemat dan modern
                         hehehe hehehe hehehe heheh.
                       </p>
-                      <a href="">
+                      <a href="{{ URL::to('/#pricing') }}">
                         Lebih lanjut
                       </a>
                 </div>

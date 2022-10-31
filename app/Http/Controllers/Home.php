@@ -24,4 +24,9 @@ class Home extends Controller
     {
         return view('pages.halaman_depan.preview.' . $nama_tema);
     }
+
+    public function getPages($page){
+        return view('turnjs.pages.'.$page);
+    }
+
 }
