@@ -37,6 +37,10 @@
     opacity: 0.5;
 }
 
+.text-right{
+    text-align: right;
+}
+
 .text-secondary{
     color: #918985;
 }
@@ -79,3 +83,33 @@
 }
 
 
+
+/* paraloid image effect */
+.polaroid {
+    position: relative;
+    width: 220px;
+  }
+   
+  .polaroid img {
+    margin-top: 10px;
+    border: 10px solid #fff;
+    border-bottom: 10px solid #fff;
+    -webkit-box-shadow: 3px 3px 3px #777;
+       -moz-box-shadow: 3px 3px 3px #777;
+            box-shadow: 3px 3px 3px #777;
+  }
+
+  .rotate-right{
+    transform:rotate(10deg);
+  }
+
+  .rotate-left{
+    transform:rotate(-10deg);
+  }
+   
+  
+  /* galery */
+
+  .gallery-wrapper {
+    
+  }

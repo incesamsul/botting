@@ -8,7 +8,7 @@
 }
 
 body {
-    background: url('../pics/bg/body_bg.jpg') no-repeat;
+    background: url('../pics/bg/bg2.png') no-repeat;
     background-size: cover;
 }
 
@@ -174,7 +174,7 @@ form {
 .sj-book .p3,
 .sj-book .p21,
 .sj-book .p22 {
-    background-image: url(../pics/test.png) !important;
+    background-image: url(../pics/download.png) !important;
 }
 
 .sj-book .p1 {
@@ -398,5 +398,16 @@ form {
     .sj-book {
         height: 92vh;
         width: 100vw;
+    }
+}
+
+@media (min-width: 1580px) {
+    .sj-book {
+        
+        width: 960px;
+        height: 600px;
+    }
+    #canvas {
+        margin: 100px auto ;
     }
 }

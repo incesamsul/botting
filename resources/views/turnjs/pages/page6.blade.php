@@ -12,4 +12,4 @@
     </div>
 
 </div>
-<span class="page-number">7</span>
+<span class="page-number">6</span>
