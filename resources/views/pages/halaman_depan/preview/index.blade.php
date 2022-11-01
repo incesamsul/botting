@@ -22,6 +22,7 @@
     />
 </head>
 <body>
+
     <audio controls id="soundEffect" hidden>
         <source src="{{ asset('turnjs/audio/paperslide.wav') }}" type="audio/mpeg">
       Your browser does not support the audio element.

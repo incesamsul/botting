@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
-.mempelai-wrapper{
+.mempelai-wrapper {
     position: relative;
     z-index: 10;
     height: 400px;
@@ -9,26 +9,40 @@
     align-items: center;
 }
 
-.mempelai{
+.mempelai {
     margin-top: 30px;
-    color: #F9C4C7 !important;
     font-size: 51px !important;
     font-family: 'Great Vibes', cursive;
-
 }
 
-.and{
+.text-pink_flower {
     color: #F9C4C7 !important;
+}
+
+.text-red_roses {
+    color: #DE0000 !important;
+}
+
+.border-pink_flower {
+    border: 2px solid #F9C4C7;
+}
+
+.border-red_roses {
+    border: 2px solid #DE0000;
+}
+
+.and {
     font-size: 71px !important;
 }
 
-.mempelai-img{
+.mempelai-img {
     width: 110px !important;
     height: 110px !important;
     border-radius: 50%;
     margin-top: 78px;
 }
-.mempelai-img-frame{
+
+.mempelai-img-frame {
     top: 60px;
     position: absolute;
     width: 170px !important;
@@ -37,79 +51,73 @@
     opacity: 0.5;
 }
 
-.text-right{
+.text-right {
     text-align: right;
 }
 
-.text-secondary{
+.text-secondary {
     color: #918985;
 }
-.text-main{
-    color: #F9C4C7;
-}
 
-.text-center{
+.text-main {}
+
+.text-center {
     text-align: center;
 }
 
-.mt-5{
+.mt-5 {
     margin-top: 15px;
 }
 
-.icon{
+.icon {
     font-size: 50px !important;
-    color: #F9C4C7;
 }
 
-.counter{
+.counter {
     display: flex;
 }
 
-.counter span{
+.counter span {
     width: 40px;
     margin-right: 10px;
     padding: 14px;
     font-size: 14px;
     border-radius: 20px;
-    border: 2px solid #F9C4C7;
     background-color: white;
-    color: #F9C4C7;
 }
 
-.lokasi-wrapper{
+.lokasi-wrapper {
     border: none !important;
     width: 400px;
     height: 400px;
 }
 
 
-
 /* paraloid image effect */
+
 .polaroid {
     position: relative;
     width: 220px;
-  }
-   
-  .polaroid img {
+}
+
+.polaroid img {
     margin-top: 10px;
     border: 10px solid #fff;
     border-bottom: 10px solid #fff;
     -webkit-box-shadow: 3px 3px 3px #777;
-       -moz-box-shadow: 3px 3px 3px #777;
-            box-shadow: 3px 3px 3px #777;
-  }
+    -moz-box-shadow: 3px 3px 3px #777;
+    box-shadow: 3px 3px 3px #777;
+}
 
-  .rotate-right{
-    transform:rotate(10deg);
-  }
+.rotate-right {
+    transform: rotate(10deg);
+}
 
-  .rotate-left{
-    transform:rotate(-10deg);
-  }
-   
-  
-  /* galery */
+.rotate-left {
+    transform: rotate(-10deg);
+}
 
-  .gallery-wrapper {
-    
-  }
+
+/* galery */
+
+.gallery-wrapper {}

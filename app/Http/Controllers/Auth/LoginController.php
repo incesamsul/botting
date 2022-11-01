@@ -29,7 +29,7 @@ class LoginController extends Controller
 
         if ($user) {
             if (password_verify($request->password, $user->password)) {
-                if ($user->active == '0') {
+                if ($user->active == '1') {
                     Auth::login($user);
                     return redirect('/dashboard');
                 } else {

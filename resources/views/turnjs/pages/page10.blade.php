@@ -1,22 +1,22 @@
-<img src="{{ asset('turnjs/invitation/pics/bg/tl.png?p') }}" style="width:100%; height:100%;position: absolute; z-index: 1">
+<img src="{{ asset('turnjs/invitation/pics/bg/' . $nama_tema . '/tl.png?p') }}" style="width:100%; height:100%;position: absolute; z-index: 1">
 <div class="book-content">
 
-    <div class="mempelai-wrapper text-center ">
-        <span class="mempelai">Hitung mundur</span>
-        <div class="counter">
-            <span>
+    <div class="mempelai-wrapper text-center text-{{ $nama_tema }} ">
+        <span class="mempelai ">Hitung mundur</span>
+        <div class="counter ">
+            <span class="border-{{ $nama_tema }}">
                 01
                 <br> hari
             </span>
-            <span>
+            <span class="border-{{ $nama_tema }}">
                 01
                 <br> jam
             </span>
-            <span>
+            <span class="border-{{ $nama_tema }}">
                 01
                 <br> menit
             </span>
-            <span>
+            <span class="border-{{ $nama_tema }}">
                 01
                 <br> detik
             </span>

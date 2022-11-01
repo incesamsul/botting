@@ -9,6 +9,7 @@
 
 body {
     background: url('../pics/bg/bg2.png') no-repeat;
+    background-position: 0px -800px;
     background-size: cover;
 }
 
@@ -174,7 +175,7 @@ form {
 .sj-book .p3,
 .sj-book .p21,
 .sj-book .p22 {
-    background-image: url(../pics/download.png) !important;
+    background-image: url(../pics/sampul.png) !important;
 }
 
 .sj-book .p1 {
@@ -403,11 +404,10 @@ form {
 
 @media (min-width: 1580px) {
     .sj-book {
-        
         width: 960px;
         height: 600px;
     }
     #canvas {
-        margin: 100px auto ;
+        margin: 100px auto;
     }
 }

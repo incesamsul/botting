@@ -22,11 +22,13 @@ class Home extends Controller
 
     public function preview($nama_tema)
     {
-        return view('pages.halaman_depan.preview.' . $nama_tema);
+        // return view('pages.halaman_depan.preview.' . $nama_tema);
+        return view('pages.halaman_depan.preview.index');
     }
 
-    public function getPages($page){
-        return view('turnjs.pages.'.$page);
+    public function getPages($page, $nama_tema)
+    {
+        $data['nama_tema'] = $nama_tema;
+        return view('turnjs.pages.' . $page, $data);
     }
-
 }
