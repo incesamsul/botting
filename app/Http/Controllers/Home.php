@@ -22,8 +22,9 @@ class Home extends Controller
 
     public function preview($nama_tema)
     {
+        $data['nama_tema'] = $nama_tema;
         // return view('pages.halaman_depan.preview.' . $nama_tema);
-        return view('pages.halaman_depan.preview.index');
+        return view('pages.halaman_depan.preview.index',$data);
     }
 
     public function getPages($page, $nama_tema)

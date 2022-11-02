@@ -32,16 +32,48 @@
             <div class="sj-book">
                 <div depth="5" class="hard">
                     <div class="side"></div>
+                    <div class="sampul" style="position: absolute;">
+                        <div class="cover-effect-right"></div>
+                        <div class="cover-effect-left"></div>
+                        <div class="overlay-effect text-{{ $nama_tema }}">
+                            <span>HARI PERNIKAHAN</span>
+                            <h3>Rafli & Aliya</h3>
+                            <span>10 * 20 * 2022</span>
+                        </div>
+                        <img src="{{ asset('turnjs/invitation/pics/bg/' . $nama_tema .'/bg2.png') }}" alt="">
+                    </div>
                 </div>
                 <div depth="5" class="hard front-side">
                     <div class="depth"></div>
                 </div>
-                <div class="own-size" style="background-color: red;"></div>
+                <div class="own-size">
+                    <div class="sampul" style="position: absolute;">
+                        <div class="cover-effect-right"></div>
+                        <div class="cover-effect-left"></div>
+                        <div class="overlay-effect text-{{ $nama_tema }}">
+                            <span>HARI PERNIKAHAN</span>
+                            <h3>Rafli & Aliya</h3>
+                            <span>10 * 20 * 2022</span>
+                        </div>
+                        <img src="{{ asset('turnjs/invitation/pics/bg/' . $nama_tema .'/bg2.png') }}" alt="">
+                    </div>
+                </div>
                 <div class="own-size even"></div>
                 <div class="hard fixed back-side p21">
                     <div class="depth"></div>
                 </div>
-                <div class="hard p22"></div>
+                <div class="hard p22">
+                    <div class="sampul" style="position: absolute;">
+                        <div class="cover-effect-right"></div>
+                        <div class="cover-effect-left"></div>
+                        <div class="overlay-effect text-{{ $nama_tema }}">
+                            <span>HARI PERNIKAHAN</span>
+                            <h3>Rafli & Aliya</h3>
+                            <span>10 * 20 * 2022</span>
+                        </div>
+                        <img src="{{ asset('turnjs/invitation/pics/bg/' . $nama_tema .'/bg2.png') }}" alt="">
+                    </div>
+                </div>
             </div>
         </div>
         <div id="slider-bar" class="turnjs-slider">
