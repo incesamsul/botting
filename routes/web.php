@@ -81,6 +81,8 @@ Route::group(['middleware' => ['auth', 'ceklevel:pelanggan']], function () {
     Route::get('/{domain}', [Pelanggan::class, 'undangan']);
     Route::group(['prefix' => 'pelanggan'], function () {
         Route::get('/tema', [Pelanggan::class, 'tema']);
+        Route::get('/info', [Pelanggan::class, 'info']);
+        Route::get('/info/{jenis_info}', [Pelanggan::class, 'info']);
         Route::get('/publish', [Pelanggan::class, 'publish']);
         Route::get('/pilih_tema/{id_tema}', [TemaUser::class, 'store']);
         Route::post('/simpan_domain', [Pelanggan::class, 'simpanDomain']);

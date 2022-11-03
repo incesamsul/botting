@@ -376,7 +376,7 @@
         <div class="row mt-5">
         @foreach($tema as $row)
             <div class="col-sm-4">
-                <div class="card theme-card border-0 hidden">
+                <div class="card soft-shadow theme-card border-0 hidden">
                     <img src="{{ asset('data/tema/' . $row->thumbnail_tema) }}" alt="">
                     <div class="caption d-flex flex-row justify-content-between p-4 align-items-center">
                         <h4>{{ $row->nama_tema }}</h4>

@@ -37,7 +37,7 @@
                         <div class="cover-effect-left"></div>
                         <div class="overlay-effect text-{{ $nama_tema }}">
                             <span>HARI PERNIKAHAN</span>
-                            <h3>Eren & Mikasa</h3>
+                            <h3>{{ $mempelai_pria }} & Mikasa</h3>
                             <span>10 * 20 * 2022</span>
                         </div>
                         <img src="{{ asset('turnjs/invitation/pics/bg/' . $nama_tema .'/bg2.png') }}" alt="">
@@ -392,6 +392,7 @@
         });
 
         // Load turn.js
+
         let tema = '{{ $nama_tema }}';
         yepnope({
             test: Modernizr.csstransforms,

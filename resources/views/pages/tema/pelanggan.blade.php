@@ -14,7 +14,7 @@
         </div>
         <div class="row">
             @foreach ($tema as $row)
-                <div class="col-sm-4">
+                <div class="col-sm-3">
                     <a href="{{ URL::to('/pelanggan/pilih_tema/' . $row->id_tema) }}" class="text-decoration-none">
                         <div
                             class="card {{ getTemaUser(auth()->user()->id)->id_tema == $row->id_tema ? 'active-card' : '' }} theme-card border-0">

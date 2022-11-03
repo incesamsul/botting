@@ -13,9 +13,9 @@
             <li class="menu-header">Pengguna</li>
             <li class="" id="liDashboard"><a class="nav-link" href="{{ URL::to('/dashboard') }}"><i
                         class="fas fa-tachometer-alt"></i> <span>Dashboard</span></a></li>
-            <li class="" id="liProfile"><a class="nav-link" href="{{ URL::to('/profile') }}"><i
+            {{-- <li class="" id="liProfile"><a class="nav-link" href="{{ URL::to('/profile') }}"><i
                         class="fas fa-user"></i>
-                    <span>Profile</span></a></li>
+                    <span>Profile</span></a></li> --}}
             <li class="" id="liBantuan"><a class="nav-link" href="{{ URL::to('/bantuan') }}"><i
                         class="fas fa-question-circle"></i> <span>Bantuan</span></a></li>
 

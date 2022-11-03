@@ -227,6 +227,10 @@ ul.timeline>li:before {
     background-color: rgba(0, 0, 0, 0.2) !important;
 }
 
+.card{
+    overflow: hidden;
+}
+
 .card-form-header {
     padding: 20px !important;
     transition: .5s;

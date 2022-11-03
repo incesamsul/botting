@@ -14,6 +14,11 @@ class Pelanggan extends Controller
         return view('pages.tema.pelanggan',$data);
     }
 
+    public function info($jenisInfo = 'mempelai_pria'){
+        $data['jenisInfo'] = $jenisInfo;
+        return view('pages.info.index',$data);
+    }
+
     public function publish(){
         $undangan = Undangan::where('id_user',auth()->user()->id);
         $data['domain'] = $undangan->first();
@@ -22,11 +27,12 @@ class Pelanggan extends Controller
 
     public function undangan($domain){
         $undangan = Undangan::where('domain',$domain);
-        $namaTema = $undangan->first()->user->temaUser->tema->nama_tema;
-        $data['nama'] = 'sam';
-        if($namaTema == 'aesthetic'){
-            return view('pages.halaman_depan.undangan.'.$namaTema, $data);
-        }
+        $namaTema = spaceToUnderscore($undangan->first()->user->temaUser->tema->nama_tema);
+        $data['mempelai_pria'] = 'Eren';
+        $data['mempelai_wanita'] = 'mikasa';
+        $data['nama_tema'] = $namaTema;
+        return view('pages.halaman_depan.undangan.index', $data);
+        
     }
 
     public function simpanDomain(Request $request){

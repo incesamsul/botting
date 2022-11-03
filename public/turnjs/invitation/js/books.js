@@ -29,9 +29,10 @@ function updateDepth(book, newPage) {
 }
 
 function loadPage(page) {
-    let url = window.location.href;
-    let segmentTheme = url.split('/')[4];
-    let namaTema = segmentTheme.split('#')[0];
+    // let url = window.location.href;
+    // let segmentTheme = url.split('/')[4];
+    // let namaTema = segmentTheme.split('#')[0];
+    let namaTema = tema;
     $.ajax({ url: '/get_pages/page' + page + '/' + namaTema }).
     done(function(pageHtml) {
         $('.sj-book .p' + page).html(pageHtml.replace('samples/steve-jobs/', ''));

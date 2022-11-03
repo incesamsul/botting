@@ -23,13 +23,6 @@
 <script src="{{ asset('bootstrap/js/bootstrap.bundle.js') }}"></script>
 
 <script src="{{ asset('stisla/assets/js/stisla.js') }}"></script>
-{{--
-<!-- JS Libraies -->
-<script src="../node_modules/jquery-sparkline/jquery.sparkline.min.js"></script>
-<script src="../node_modules/chart.js/dist/Chart.min.js"></script>
-<script src="../node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
-<script src="../node_modules/summernote/dist/summernote-bs4.js"></script>
-<script src="../node_modules/chocolat/dist/js/jquery.chocolat.min.js"></script> --}}
 
 <!-- Template JS File -->
 <script src="{{ asset('stisla/assets/js/scripts.js') }}"></script>
@@ -43,14 +36,6 @@
 
 <script src="{{ asset('plugins/chart.js/Chart.min.js') }}"></script>
 
-{{-- Dropzone cdn --}}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.2/min/dropzone.min.js" integrity="sha512-VQQXLthlZQO00P+uEu4mJ4G4OAgqTtKG1hri56kQY1DtdLeIqhKUp9W/lllDDu3uN3SnUNawpW7lBda8+dSi7w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-
-@if (request()->segment(2) == 'pembayaran' || request()->segment(2) == 'cicil' || request()->segment(2) == 'lunas' || request()->segment(2) == 'cuti')
-{{-- script dropzone --}}
-<script src="{{ asset('js/my_dropzone.js') }}"></script>
-@endif
 
 {{-- Datatable js --}}
 

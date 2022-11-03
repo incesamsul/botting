@@ -8,7 +8,7 @@
   <!-- Mobile Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <!-- Site Metas -->
-  <link rel="icon" href="images/favicon.png" type="image/gif" />
+  {{-- <link rel="icon" href="images/favicon.png" type="image/gif" /> --}}
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <meta name="author" content="" />
@@ -97,27 +97,11 @@
     </header>
     <!-- end header section -->
     @yield('content')
-  <!-- footer section -->
-  {{-- <footer class="footer_section" style="background: linear-gradient(to right, #fffbeb, #ebeeff);">
-    <div class="container">
-      <p>
-        &copy; <span id="displayYear"></span> All Rights Reserved By
-        <a href="">tani    </a>
-      </p>
-    </div>
-  </footer> --}}
-  <!-- footer section -->
-  <!-- Sweet Alert -->
-  <script src="{{ asset('plugins/sweetalert2/sweetalert2.min.js') }}"></script>
-  <!-- jQery -->
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    {{-- sweet alert --}}
+<script src="{{ asset('plugins/sweetalert2/sweetalert2.min.js') }}"></script>
+  <script src="{{ asset('js/home.js') }}"></script>
 
-  {{-- scanner --}}
-<script src="{{ asset('plugins/scanner/html5-qrcode.min.js') }}"></script>
-
-  <script src="{{ asset('plugins/qrcodejs/jquery.min.js') }}"></script>
-  <script src="{{ asset('plugins/qrcodejs/qrcode.min.js') }}"></script>
 
   @yield('script')
 
