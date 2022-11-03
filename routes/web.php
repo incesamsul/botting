@@ -36,7 +36,7 @@ Route::get('/tentang_aplikasi', [Home::class, 'tentangAplikasi']);
 
 Route::get('/old_home', [Home::class, 'oldHome']);
 Route::get('/get_pages/{page}/{nama_tema}', [Home::class, 'getPages']);
-Route::get('/get_undangan_pages/{page}/{nama_tema}/{informasi}', [Home::class, 'getUndanganPages']);
+Route::get('/get_undangan_pages/{page}', [Home::class, 'getUndanganPages']);
 
 
 Route::group(['middleware' => ['guest']], function () {

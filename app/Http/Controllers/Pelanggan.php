@@ -37,6 +37,7 @@ class Pelanggan extends Controller
         $namaTema = spaceToUnderscore($undangan->first()->user->temaUser->tema->nama_tema);
         $data['nama_tema'] = $namaTema;
         $data['informasi'] = Informasi::where('id_user', $undangan->first()->user->id)->first();
+        $data['id_user'] = $undangan->first()->user->id;
         return view('pages.halaman_depan.undangan.index', $data);
     }
 

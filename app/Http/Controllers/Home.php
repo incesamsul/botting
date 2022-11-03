@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Percetakan;
 use App\Models\Tema;
+use Illuminate\Http\Request;
 
 class Home extends Controller
 {
@@ -33,10 +34,11 @@ class Home extends Controller
         return view('turnjs.pages.' . $page, $data);
     }
 
-    public function getUndanganPages($page, $nama_tema, $informasi)
+    public function getUndanganPages(Request $request, $page)
     {
-        $data['nama_tema'] = $nama_tema;
-        $data['informasi'] = $informasi;
+        $data['nama_tema'] = $request->nama_tema;
+        $idUser = $request->id_user;
+        $data['informasi'] = getInformasiUndangan($idUser);
         return view('undangan.pages.' . $page, $data);
     }
 }

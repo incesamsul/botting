@@ -33,10 +33,18 @@ function loadPage(page) {
     // let segmentTheme = url.split('/')[4];
     // let namaTema = segmentTheme.split('#')[0];
     let namaTema = tema;
-    let informasiUndangan = informasi;
-    $.ajax({ url: '/get_undangan_pages/page' + page + '/' + namaTema + '/' + informasiUndangan }).
+    let idUser = id_user;
+    $.ajax({
+         url: '/get_undangan_pages/page' + page ,
+         data: {
+            nama_tema: namaTema,
+            id_user: idUser
+         }
+    }).
     done(function(pageHtml) {
         $('.sj-book .p' + page).html(pageHtml.replace('samples/steve-jobs/', ''));
+    }).fail(function(xhr, status, error) {
+        console.log(error);
     });
 
 }

@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Informasi;
 use App\Models\TemaUser;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\URL;
@@ -8,6 +9,12 @@ use PhpParser\Node\Expr\FuncCall;
 use Illuminate\Support\Str;
 use function PHPUnit\Framework\isNull;
 
+
+
+function getInformasiUndangan($idUser)
+{
+    return Informasi::where('id_user', $idUser)->first();
+}
 
 function getTemaUser($idUser)
 {

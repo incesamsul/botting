@@ -18,16 +18,18 @@
     <script type="text/javascript" src="{{ asset('turnjs/extras/modernizr.2.5.3.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('turnjs/lib/hash.js') }}"></script>
     <link rel="stylesheet" href="{{ asset('turnjs/invitation/css/invitation.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
 
     <audio controls id="soundEffect" hidden>
         <source src="{{ asset('turnjs/audio/paperslide.wav') }}" type="audio/mpeg">
-      Your browser does not support the audio element.
-      </audio>
-	<div id="canvas">
+        Your browser does not support the audio element.
+    </audio>
+    <div id="canvas">
         <div id="book-zoom">
             <div class="sj-book">
                 <div depth="5" class="hard">
@@ -37,10 +39,11 @@
                         <div class="cover-effect-left"></div>
                         <div class="overlay-effect text-{{ $nama_tema }}">
                             <span>HARI PERNIKAHAN</span>
-                            <h3>{{ $informasi ? $informasi->nama_mempelai_pria : '' }} & {{ $informasi ? $informasi->nama_mempelai_wanita : '' }}</h3>
+                            <h3>{{ $informasi ? $informasi->nama_mempelai_pria : '' }} &
+                                {{ $informasi ? $informasi->nama_mempelai_wanita : '' }}</h3>
                             <span>{{ $informasi ? $informasi->tgl_akad : '' }}</span>
                         </div>
-                        <img src="{{ asset('turnjs/invitation/pics/bg/' . $nama_tema .'/bg2.png') }}" alt="">
+                        <img src="{{ asset('turnjs/invitation/pics/bg/' . $nama_tema . '/bg2.png') }}" alt="">
                     </div>
                 </div>
                 <div depth="5" class="hard front-side">
@@ -52,10 +55,11 @@
                         <div class="cover-effect-left"></div>
                         <div class="overlay-effect text-{{ $nama_tema }}">
                             <span>HARI PERNIKAHAN</span>
-                            <h3>{{ $informasi ? $informasi->nama_mempelai_pria : '' }} & {{ $informasi ? $informasi->nama_mempelai_wanita : '' }}</h3>
+                            <h3>{{ $informasi ? $informasi->nama_mempelai_pria : '' }} &
+                                {{ $informasi ? $informasi->nama_mempelai_wanita : '' }}</h3>
                             <span>{{ $informasi ? $informasi->tgl_akad : '' }}</span>
                         </div>
-                        <img src="{{ asset('turnjs/invitation/pics/bg/' . $nama_tema .'/bg2.png') }}" alt="">
+                        <img src="{{ asset('turnjs/invitation/pics/bg/' . $nama_tema . '/bg2.png') }}" alt="">
                     </div>
                 </div>
                 <div class="own-size even"></div>
@@ -68,10 +72,11 @@
                         <div class="cover-effect-left"></div>
                         <div class="overlay-effect text-{{ $nama_tema }}">
                             <span>HARI PERNIKAHAN</span>
-                            <h3>{{ $informasi ? $informasi->nama_mempelai_pria : '' }} & {{ $informasi ? $informasi->nama_mempelai_wanita : '' }}</h3>
+                            <h3>{{ $informasi ? $informasi->nama_mempelai_pria : '' }} &
+                                {{ $informasi ? $informasi->nama_mempelai_wanita : '' }}</h3>
                             <span>{{ $informasi ? $informasi->tgl_akad : '' }}</span>
                         </div>
-                        <img src="{{ asset('turnjs/invitation/pics/bg/' . $nama_tema .'/bg2.png') }}" alt="">
+                        <img src="{{ asset('turnjs/invitation/pics/bg/' . $nama_tema . '/bg2.png') }}" alt="">
                     </div>
                 </div>
             </div>
@@ -394,15 +399,23 @@
         // Load turn.js
 
         let tema = '{{ $nama_tema }}';
-        let informasi = '{{ $informasi }}';
+        let id_user = '{{ $id_user }}';
+
         yepnope({
             test: Modernizr.csstransforms,
-            yep: ['{{ asset("turnjs/lib/turn.js") }}'],
-            nope: ['{{ asset("turnjs/lib/turn.html4.min.js") }}', '{{ asset("turnjs/invitation/css/jquery.ui.html4.css") }}', '{{ asset("turnjs/invitation/css/books-html4.css") }}'],
-            both: ['{{ asset("turnjs/invitation/js/undangan.js") }}', '{{ asset("turnjs/invitation/css/jquery.ui.css") }}', '{{ asset("turnjs/invitation/css/books.css") }}'],
+            yep: ['{{ asset('turnjs/lib/turn.js') }}'],
+            nope: ['{{ asset('turnjs/lib/turn.html4.min.js') }}',
+                '{{ asset('turnjs/invitation/css/jquery.ui.html4.css') }}',
+                '{{ asset('turnjs/invitation/css/books-html4.css') }}'
+            ],
+            both: ['{{ asset('turnjs/invitation/js/undangan.js') }}',
+                '{{ asset('turnjs/invitation/css/jquery.ui.css') }}',
+                '{{ asset('turnjs/invitation/css/books.css') }}'
+            ],
             complete: loadApp
         });
     </script>
 
 </body>
+
 </html>
