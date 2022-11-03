@@ -8,7 +8,7 @@
         <span class="text-main mt-5">11:00 WITA - Selesai</span>
         <i class="fa-solid fa-mountain-city icon mt-5"></i>
         <span class="text-main mt-5">Kediaman memplay wanita</span>
-        <span class="text-main mt-5">jln. poros tonasa 2 bontoa luar, Kel. Bontoa, Kec. Minasatene, Kab. Pangkep</span>
+        <span class="text-main mt-5">Shiganshina-ku? is a town located on the south edge of Wall Maria and is the hometown of Eren Yeager, .</span>
     </div>
 
 </div>

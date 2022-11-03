@@ -3,9 +3,11 @@
 
     <div class="mempelai-wrapper text-center ">
         <span class="mempelai text-{{ $nama_tema }}">Kalimat mutiara</span>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque eveniet ducimus deserunt possimus molestias obcaecati laudantium velit iusto hic repellendus. Nemo assumenda quidem natus sint deleniti, error voluptatum adipisci unde.</p>
+        <p>
+            “The only thing we're allowed to believe is that we won't regret the choice we made.” “The world is merciless, and it's also very beautiful.” “Once I'm dead, I won't even be able to remember you.
+        </p>
         <p class="mt-5">
-            --silorem
+            --AOT
         </p>
     </div>
 

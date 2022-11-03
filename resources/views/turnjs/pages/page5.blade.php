@@ -13,7 +13,6 @@
 		<li><a href="#page/73">Hadiah <span>73</span></a></li>
 		<li><a href="#page/86">Komentar <span>86</span></a></li>
 		<li><a href="#page/25">Qrcode <span>25</span></a></li>
-		<li><a href="#page/25">Qrcode <span>25</span></a></li>
 		<li><a href="#page/30">Ucapan<span>30</span></a></li>
 	</ul>
 </div>

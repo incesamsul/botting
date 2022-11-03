@@ -36,6 +36,7 @@
 }
 
 .mempelai-img {
+    object-fit: cover;
     width: 110px !important;
     height: 110px !important;
     border-radius: 50%;
@@ -121,3 +122,6 @@
 /* galery */
 
 .gallery-wrapper {}
+
+
+/* navigasi  */

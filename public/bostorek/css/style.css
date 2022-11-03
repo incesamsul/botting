@@ -873,7 +873,14 @@ a:focus {
     background-color: #F5F6F9 !important;
 }
 
+.theme-card img {
+    max-height: 320px !important;
+    object-fit: cover;
+    border-radius: 20px !important;
+}
+
 .card {
+    overflow: hidden;
     border-radius: 18px;
 }
 
