@@ -227,8 +227,13 @@ ul.timeline>li:before {
     background-color: rgba(0, 0, 0, 0.2) !important;
 }
 
-.card{
+.card {
     overflow: hidden;
+}
+
+.card img {
+    max-height: 180px;
+    object-fit: cover;
 }
 
 .card-form-header {

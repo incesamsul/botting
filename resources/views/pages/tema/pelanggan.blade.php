@@ -17,7 +17,7 @@
                 <div class="col-sm-3">
                     <a href="{{ URL::to('/pelanggan/pilih_tema/' . $row->id_tema) }}" class="text-decoration-none">
                         <div
-                            class="card {{ getTemaUser(auth()->user()->id)->id_tema == $row->id_tema ? 'active-card' : '' }} theme-card border-0">
+                            class="card {{ getTemaUser(auth()->user()->id) == $row->id_tema ? 'active-card' : '' }} theme-card border-0">
                             <img src="{{ asset('data/tema/' . $row->thumbnail_tema) }}" alt="">
                             <div class="caption d-flex flex-row justify-content-between p-4 align-items-center">
                                 <h4>{{ $row->nama_tema }}</h4>

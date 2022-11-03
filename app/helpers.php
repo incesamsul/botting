@@ -9,8 +9,13 @@ use Illuminate\Support\Str;
 use function PHPUnit\Framework\isNull;
 
 
-function getTemaUser($idUser){
-    return TemaUser::where('id_user',$idUser)->first();
+function getTemaUser($idUser)
+{
+    $tema = TemaUser::where('id_user', $idUser)->first();
+    if ($tema) {
+        return $tema->id_tema;
+    }
+    return 0;
 }
 
 function generateId()
@@ -23,7 +28,8 @@ function removeSpace($string)
     return str_replace(" ", "", $string);
 }
 
-function spaceToUnderscore($string){
+function spaceToUnderscore($string)
+{
     return strtolower(str_replace(" ", "_", $string));
 }
 

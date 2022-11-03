@@ -26,7 +26,7 @@ class Admin extends Controller
 
     public function pengguna()
     {
-        $data['pengguna'] = $this->userModel->getAllUser();
+        $data['pengguna'] = User::all();
         return view('pages.pengguna.index', $data);
     }
 
@@ -37,7 +37,8 @@ class Admin extends Controller
     }
 
 
-    public function createTema(Request $request){
+    public function createTema(Request $request)
+    {
 
         $thumbnailTema = uniqid() . '.jpg';
 
@@ -48,8 +49,7 @@ class Admin extends Controller
             'thumbnail_tema' => $thumbnailTema
         ]);
 
-        return redirect()->back()->with('message','berhsil disimpan');
-
+        return redirect()->back()->with('message', 'berhsil disimpan');
     }
 
 

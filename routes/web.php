@@ -5,6 +5,7 @@ use App\Http\Controllers\Auth\LoginController;
 
 use App\Http\Controllers\General;
 use App\Http\Controllers\Home;
+use App\Http\Controllers\InformasiController;
 use App\Http\Controllers\TemaUser;
 
 use App\Http\Controllers\Pelanggan;
@@ -35,6 +36,7 @@ Route::get('/tentang_aplikasi', [Home::class, 'tentangAplikasi']);
 
 Route::get('/old_home', [Home::class, 'oldHome']);
 Route::get('/get_pages/{page}/{nama_tema}', [Home::class, 'getPages']);
+Route::get('/get_undangan_pages/{page}/{nama_tema}/{informasi}', [Home::class, 'getUndanganPages']);
 
 
 Route::group(['middleware' => ['guest']], function () {
@@ -86,5 +88,14 @@ Route::group(['middleware' => ['auth', 'ceklevel:pelanggan']], function () {
         Route::get('/publish', [Pelanggan::class, 'publish']);
         Route::get('/pilih_tema/{id_tema}', [TemaUser::class, 'store']);
         Route::post('/simpan_domain', [Pelanggan::class, 'simpanDomain']);
+
+        // CRUD INFO
+        Route::post('/save_mempelai_pria', [InformasiController::class, 'saveMempelaiPria']);
+        Route::post('/save_mempelai_wanita', [InformasiController::class, 'saveMempelaiWanita']);
+        Route::post('/save_akad', [InformasiController::class, 'saveAkad']);
+        Route::post('/save_resepsi', [InformasiController::class, 'saveResepsi']);
+        Route::post('/save_quotes', [InformasiController::class, 'saveQuotes']);
+        Route::post('/save_kisah_cinta', [InformasiController::class, 'saveKisahCinta']);
+        Route::post('/save_gallery', [InformasiController::class, 'saveGallery']);
     });
 });

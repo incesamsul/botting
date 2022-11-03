@@ -28,7 +28,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @include('pages.pengguna.users_data')
+                            {{-- @include('pages.pengguna.users_data') --}}
                         </tbody>
                     </table>
                     <input type="hidden" name="hidden_page" id="hidden_page" value="1" />

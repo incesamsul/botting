@@ -24,12 +24,19 @@ class Home extends Controller
     {
         $data['nama_tema'] = $nama_tema;
         // return view('pages.halaman_depan.preview.' . $nama_tema);
-        return view('pages.halaman_depan.preview.index',$data);
+        return view('pages.halaman_depan.preview.index', $data);
     }
 
     public function getPages($page, $nama_tema)
     {
         $data['nama_tema'] = $nama_tema;
         return view('turnjs.pages.' . $page, $data);
+    }
+
+    public function getUndanganPages($page, $nama_tema, $informasi)
+    {
+        $data['nama_tema'] = $nama_tema;
+        $data['informasi'] = $informasi;
+        return view('undangan.pages.' . $page, $data);
     }
 }
