@@ -4,12 +4,12 @@
 
     <div class="mempelai-wrapper">
         <img src="{{ asset('turnjs/invitation/pics/bg/' . $nama_tema . '/bingkai.png?p') }}" class="mempelai-img-frame">
-        <img src="{{ asset('turnjs/invitation/pics/perempuan.jpg?p') }}" class="mempelai-img">
-        <span class="mempelai text-{{ $nama_tema }}">Mikasa {{ $informasi->nama_mempelai_pria }} </span>
+        <img src="{{ asset('data/informasi/' . $informasi->foto_mempelai_wanita) }}" class="mempelai-img">
+        <span class="mempelai text-{{ $nama_tema }}">{{ $informasi->nama_mempelai_wanita }} </span>
         <span class="text-secondary">Anak dari</span>
-        <span class="text-secondary mt-5">Aakkaman</span>
+        <span class="text-secondary mt-5">{{ $informasi->nama_ayah_mempelai_wanita }}</span>
         <span class="text-secondary">&</span>
-        <span class="text-secondary">Yuka Hirose</span>
+        <span class="text-secondary">{{ $informasi->nama_ibu_mempelai_wanita }}</span>
     </div>
 
 </div>

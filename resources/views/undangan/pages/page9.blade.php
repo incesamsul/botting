@@ -4,11 +4,11 @@
     <div class="mempelai-wrapper text-center text-{{ $nama_tema }}">
         <span class="mempelai ">Resepsi</span>
         <i class="icon fa-regular fa-calendar-check"></i>
-        <span class="text-main mt-5">Senin, 22 oktober 2022</span>
-        <span class="text-main mt-5">11:00 WITA - Selesai</span>
+        <span class="text-main mt-5">{{ date('l, d F Y', strtotime($informasi->tgl_resepsi)) }}</span>
+        <span class="text-main mt-5">{{ $informasi->jam_resepsi }} - Selesai</span>
         <i class="fa-solid fa-mountain-city icon mt-5"></i>
-        <span class="text-main mt-5">Kediaman memplay wanita</span>
-        <span class="text-main mt-5">Shiganshina-ku? is a town located on the south edge of Wall Maria and is the hometown of Eren Yeager, .</span>
+        <span class="text-main mt-5">Lokasi resepsi</span>
+        <span class="text-main mt-5">{{ $informasi->lokasi_resepsi }}</span>
     </div>
 
 </div>

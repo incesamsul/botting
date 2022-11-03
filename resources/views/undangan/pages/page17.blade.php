@@ -4,16 +4,16 @@
 
     <p class="mt-15">
         <div class="polaroid rotate-left" style="">
-            <img src="{{ asset('turnjs/invitation/pics/test.png?p') }}" style="width:190px; height:170px; ">
+            <img src="{{ asset('data/informasi/' . $informasi->gambar_lamaran) }}" style="width:190px; height:170px; ">
         </div>
     </p>
     <h1>Akhirnya lamaran</h1>
 
-    <h2>dipinggir kali</h2>
+    <h2>{{ $informasi->lokasi_lamaran }}</h2>
 
     <p class="capital">
-        5 years later, we’ve spent a 6-month stint in Queenstown, bought our very first home, and welcomed 2 mischievous kittens to our family. After travelling through New Zealand, Dewa finally popped the question – and Weni said yes!
+        {{ $informasi->cerita_lamaran }}
     </p>
 
     </div>
-    <span class="page-number">16</span>
+    <span class="page-number">17</span>

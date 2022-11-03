@@ -3,10 +3,8 @@
 
     <div class="mempelai-wrapper text-center ">
         <span class="mempelai text-{{ $nama_tema }}">Our Love Story</span>
-        <p>Lorem ipsum dolor sit amet consect sint deleniti, error voluptatum adipisci unde.</p>
-        <p class="mt-5">
-            --silorem
-        </p>
+        <p>Cerita kisah cinta kita dari awal bertemu sampai lamaran.</p>
+
     </div>
 
 </div>

@@ -18,6 +18,7 @@
     <script type="text/javascript" src="{{ asset('turnjs/extras/modernizr.2.5.3.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('turnjs/lib/hash.js') }}"></script>
     <link rel="stylesheet" href="{{ asset('turnjs/invitation/css/invitation.css') }}">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
 </head>
@@ -58,7 +59,18 @@
                         <img src="{{ asset('turnjs/invitation/pics/bg/' . $nama_tema .'/bg2.png') }}" alt="">
                     </div>
                 </div>
-                <div class="own-size even"></div>
+                <div class="own-size even">
+                    <div class="sampul" style="position: absolute;">
+                        <div class="cover-effect-right"></div>
+                        <div class="cover-effect-left"></div>
+                        <div class="overlay-effect text-{{ $nama_tema }}">
+                            <span>HARI PERNIKAHAN</span>
+                            <h3>Eren & Mikasa</h3>
+                            <span>10 * 20 * 2022</span>
+                        </div>
+                        <img src="{{ asset('turnjs/invitation/pics/bg/' . $nama_tema .'/bg2.png') }}" alt="">
+                    </div>
+                </div>
                 <div class="hard fixed back-side p21">
                     <div class="depth"></div>
                 </div>

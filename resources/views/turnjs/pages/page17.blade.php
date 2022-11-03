@@ -1,10 +1,10 @@
 <img src="{{ asset('turnjs/invitation/pics/bg/' . $nama_tema . '/tr.png?p') }}" style="width:100%; height:100%;position: absolute; z-index: 1">
-<div class="book-content" style=" position: relative; z-index:2;">
+<div class="book-content " style=" position: relative; z-index:2;">
 
 
     <p class="mt-15">
         <div class="polaroid rotate-left" style="">
-            <img src="{{ asset('turnjs/invitation/pics/test.png?p') }}" style="width:190px; height:170px; ">
+            <img src="{{ asset('turnjs/invitation/pics/g1.jpg?p') }}" style="width:190px; height:170px; ">
         </div>
     </p>
     <h1>Akhirnya lamaran</h1>

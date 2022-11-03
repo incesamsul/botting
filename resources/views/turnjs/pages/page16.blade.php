@@ -1,5 +1,5 @@
 <img src="{{ asset('turnjs/invitation/pics/bg/' . $nama_tema . '/bl.png?p') }}" style="width:100%; height:100%;position: absolute; z-index: 1">
-<div class="book-content" style=" position: relative; z-index:2;">
+<div class="book-content " style=" position: relative; z-index:2;">
 
     <h1  >Pertama ketemu</h1>
 
@@ -11,7 +11,7 @@
 
     <p class="center-pic">
         <div class="polaroid rotate-right" style="margin-left:150px;">
-            <img src="{{ asset('turnjs/invitation/pics/test.png?p') }}" style="width:190px; height:170px;">
+            <img src="{{ asset('turnjs/invitation/pics/g2.png?p') }}" style="width:190px; height:170px;">
         </div>
     </p>
 

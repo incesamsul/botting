@@ -5,12 +5,12 @@
     <div class="gallery-wrapper">
 
         <div class="polaroid rotate-left" style="margin-left:20px; margin-top: 20px;">
-            <img src="{{ asset('turnjs/invitation/pics/test.png?p') }}" style="width:170px; height:150px;">
+            <img src="{{ asset('data/informasi/' . $informasi->gallery1) }}" style="width:170px; height:150px;">
         </div>
         <div class="polaroid rotate-right" style="margin-left:170px;">
-            <img src="{{ asset('turnjs/invitation/pics/test.png?p') }}" style="width:170px; height:150px;">
+            <img src="{{ asset('data/informasi/' . $informasi->gallery2) }}" style="width:170px; height:150px;">
         </div>
     </div>
 
     </div>
-    <span class="page-number">16</span>
+    <span class="page-number">18</span>

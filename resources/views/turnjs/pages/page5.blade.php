@@ -1,5 +1,5 @@
 <img src="{{ asset('turnjs/invitation/pics/bg/' . $nama_tema . '/tr.png?p') }}" style="width:100%; height:100%;position: absolute; z-index: 1">
-<div class="table-contents" style=" position: relative; z-index:2;">
+<div class="table-contents " style=" position: relative; z-index:2;">
 	<h1>Daftar isi </h1>
 	<ul>
 		<li><a href="#page/1">Sampul <span>7</span></a></li>

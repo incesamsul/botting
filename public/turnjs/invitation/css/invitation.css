@@ -125,3 +125,7 @@
 
 
 /* navigasi  */
+
+:root {
+    --animate-delay: 0.5s;
+}

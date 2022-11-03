@@ -4,10 +4,10 @@
     <div class="mempelai-wrapper text-center ">
         <span class="mempelai text-{{ $nama_tema }}">Kalimat mutiara</span>
         <p>
-            “The only thing we're allowed to believe is that we won't regret the choice we made.” “The world is merciless, and it's also very beautiful.” “Once I'm dead, I won't even be able to remember you.
+            {{ $informasi->quotes }}
         </p>
         <p class="mt-5">
-            --AOT
+            --unknown
         </p>
     </div>
 

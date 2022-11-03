@@ -3,15 +3,15 @@
 
     <h1  >Pertama ketemu</h1>
 
-    <h2>Ditengah peperangan</h2>
+    <h2>{{ $informasi->lokasi_pertama_ketemu }}</h2>
 
     <p class="capital">
-        After some cheeky back and forth banter, numbers were exchanged and a first date took place the very next day with dinner and a movie. It was only 4 weeks later that Jemima packed her bags and moved in with Kurt, and their whirlwind romance began.
+        {{ $informasi->cerita_pertama_ketemu }}
     </p>
 
     <p class="center-pic">
         <div class="polaroid rotate-right" style="margin-left:150px;">
-            <img src="{{ asset('turnjs/invitation/pics/test.png?p') }}" style="width:190px; height:170px;">
+            <img src="{{ asset('data/informasi/' . $informasi->gambar_pertama_ketemu) }}" style="width:190px; height:170px;">
         </div>
     </p>
 

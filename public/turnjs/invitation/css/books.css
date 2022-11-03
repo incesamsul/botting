@@ -1,4 +1,5 @@
 /* Steve jobs' book */
+
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 @font-face {
     font-family: 'Stempel-Garamond-W01-Roman';
@@ -170,11 +171,16 @@ form {
     box-shadow: 0 0 20px #999;
 }
 
+
 /* .sj-book .p1, */
+
 .sj-book .p2,
+
 /* .sj-book .p3, */
+
 .sj-book .p21
 /* .sj-book .p22  */
+
 {
     background-image: url(../pics/sampul.png) !important;
 }
@@ -208,17 +214,15 @@ form {
     z-index: 100;
 }
 
-.sj-book .p1 .sampul{
+.sj-book .sampul {
     width: 100%;
     height: 100%;
 }
 
-.sampul img{
+.sampul img {
     width: 100%;
     height: 100%;
 }
-
-
 
 .sj-book-transform div[page="1"]>div,
 .sj-book-transform div[page="2"]>div {
@@ -246,6 +250,7 @@ form {
 .sj-book .p2 {
     background-position: -480px 0 !important;
 }
+
 
 /* .sj-book .p3 {
     background-position: -1920px 0 !important;
@@ -417,8 +422,8 @@ form {
 
 
 /* mycustom code */
-.overlay-effect{
 
+.overlay-effect {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -429,34 +434,35 @@ form {
     /* background-color: rgba(0, 0, 0, 0.1); */
 }
 
-.overlay-effect h3{
-    font-size:44px;
-    margin-bottom:10px;
-    margin-top:10px;
+.overlay-effect h3 {
+    font-size: 44px;
+    margin-bottom: 10px;
+    margin-top: 10px;
     font-family: 'Great Vibes', cursive;
 }
 
-.cover-effect-right{
-    position:absolute;
+.cover-effect-right {
+    position: absolute;
     width: 100%;
     height: 100%;
-    background:-webkit-gradient(linear, left top, right top, color-stop(0.95, #ffffff00), color-stop(1, #dadada));
-    background-image:-webkit-linear-gradient(left, #ffffff00 95%, #dadada 100%);
-    background-image:-moz-linear-gradient(left, #ffffff00 95%, #dadada 100%);
-    background-image:-ms-linear-gradient(left, #ffffff00 95%, #dadada 100%);
-    background-image:-o-linear-gradient(left, #ffffff00 95%, #dadada 100%);
-    background-image:linear-gradient(left, #ffffff00 95%, #dadada 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0.95, #ffffff00), color-stop(1, #dadada));
+    background-image: -webkit-linear-gradient(left, #ffffff00 95%, #dadada 100%);
+    background-image: -moz-linear-gradient(left, #ffffff00 95%, #dadada 100%);
+    background-image: -ms-linear-gradient(left, #ffffff00 95%, #dadada 100%);
+    background-image: -o-linear-gradient(left, #ffffff00 95%, #dadada 100%);
+    background-image: linear-gradient(left, #ffffff00 95%, #dadada 100%);
 }
-.cover-effect-left{
-    position:absolute;
+
+.cover-effect-left {
+    position: absolute;
     width: 100%;
     height: 100%;
-    background:-webkit-gradient(linear, right top, left top, color-stop(0.95, #ffffff00), color-stop(1, #cacaca));
-    background-image:-webkit-linear-gradient(right, #ffffff00 95%, #cacaca 100%);
-    background-image:-moz-linear-gradient(right, #ffffff00 95%, #cacaca 100%);
-    background-image:-ms-linear-gradient(right, #ffffff00 95%, #cacaca 100%);
-    background-image:-o-linear-gradient(right, #ffffff00 95%, #cacaca 100%);
-    background-image:linear-gradient(right, #ffffff00 95%, #cacaca 100%);
+    background: -webkit-gradient(linear, right top, left top, color-stop(0.95, #ffffff00), color-stop(1, #cacaca));
+    background-image: -webkit-linear-gradient(right, #ffffff00 95%, #cacaca 100%);
+    background-image: -moz-linear-gradient(right, #ffffff00 95%, #cacaca 100%);
+    background-image: -ms-linear-gradient(right, #ffffff00 95%, #cacaca 100%);
+    background-image: -o-linear-gradient(right, #ffffff00 95%, #cacaca 100%);
+    background-image: linear-gradient(right, #ffffff00 95%, #cacaca 100%);
 }
 
 @media (min-width: 1580px) {
