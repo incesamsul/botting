@@ -38,10 +38,10 @@ Route::get('/old_home', [Home::class, 'oldHome']);
 Route::get('/get_pages/{page}/{nama_tema}', [Home::class, 'getPages']);
 Route::get('/get_undangan_pages/{page}', [Home::class, 'getUndanganPages']);
 
-
 Route::group(['middleware' => ['guest']], function () {
     Route::get('/login', [LoginController::class, 'login'])->name('login');
     Route::get('/register', [LoginController::class, 'register']);
+    Route::get('/{domain}', [Pelanggan::class, 'undangan']);
 });
 
 // GENERAL CONTROLLER ROUTE
@@ -80,7 +80,6 @@ Route::group(['middleware' => ['auth', 'ceklevel:Administrator']], function () {
 
 // PERCETAKAN ROUTE
 Route::group(['middleware' => ['auth', 'ceklevel:pelanggan']], function () {
-    Route::get('/{domain}', [Pelanggan::class, 'undangan']);
     Route::group(['prefix' => 'pelanggan'], function () {
         Route::get('/tema', [Pelanggan::class, 'tema']);
         Route::get('/info', [Pelanggan::class, 'info']);

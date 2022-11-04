@@ -18,7 +18,10 @@
     <script type="text/javascript" src="{{ asset('turnjs/extras/modernizr.2.5.3.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('turnjs/lib/hash.js') }}"></script>
     <link rel="stylesheet" href="{{ asset('turnjs/invitation/css/invitation.css') }}">
-
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
 </head>
@@ -26,8 +29,8 @@
 
     <audio controls id="soundEffect" hidden>
         <source src="{{ asset('turnjs/audio/paperslide.wav') }}" type="audio/mpeg">
-      Your browser does not support the audio element.
-      </audio>
+            Your browser does not support the audio element.
+        </audio>
 	<div id="canvas">
         <div id="book-zoom">
             <div class="sj-book">
@@ -291,6 +294,12 @@
                 when: {
                     turning: function(e, page, view) {
 
+
+                        $('.book-content').addClass('hidden');
+                        setTimeout(() => {
+                            $('.book-content').removeClass('hidden');
+                        }, 1800);
+
                         var audio = document.getElementById("soundEffect");
                         audio.play();
 
@@ -338,6 +347,18 @@
                     },
 
                     turned: function(e, page, view) {
+
+                        $('.book-content').addClass('animate__animated');
+                        $('.book-content').addClass('animate__fadeInDown');
+                        $('.book-content').addClass('animate__delay-1s');
+
+
+                        setTimeout(() => {
+                            $('.book-content').removeClass('animate__animated');
+                            $('.book-content').removeClass('animate__fadeInDown');
+                            $('.book-content').removeClass('animate__delay-1s');
+                        }, 1000);
+
 
                         var book = $(this);
 

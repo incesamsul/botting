@@ -73,6 +73,7 @@ form {
     font-family: "Stempel-Garamond-W01-Roman";
     font-size: 16px;
     margin: 70px 40px;
+    --animate-delay: 0.15s;
 }
 
 .sj-book blockquote {
@@ -463,6 +464,13 @@ form {
     background-image: -ms-linear-gradient(right, #ffffff00 95%, #cacaca 100%);
     background-image: -o-linear-gradient(right, #ffffff00 95%, #cacaca 100%);
     background-image: linear-gradient(right, #ffffff00 95%, #cacaca 100%);
+}
+
+
+/* my custom code */
+
+.hidden {
+    opacity: 0;
 }
 
 @media (min-width: 1580px) {
