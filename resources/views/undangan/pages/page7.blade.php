@@ -7,7 +7,7 @@
         <img src="{{ asset('data/informasi/' . $informasi->foto_mempelai_pria) }}" class="mempelai-img">
         <span class="mempelai text-{{ $nama_tema }}">{{ $informasi->nama_mempelai_pria }} </span>
         <span class="text-secondary">Anak dari</span>
-        <span class="text-secondary mt-5">{{ $informasi->nama_ayah_mempelai_pria }}</span>
+        <span class="text-secondary mt-2">{{ $informasi->nama_ayah_mempelai_pria }}</span>
         <span class="text-secondary">&</span>
         <span class="text-secondary">{{ $informasi->nama_ibu_mempelai_pria }}</span>
     </div>

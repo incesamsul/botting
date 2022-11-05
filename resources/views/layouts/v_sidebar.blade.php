@@ -50,6 +50,15 @@
                 <li class="" id="liPublish"><a class="nav-link" href="{{ URL::to('/pelanggan/publish') }}"><i
                             class="fas fa-globe"></i> <span>Publish</span></a></li>
 
+                <li class="" id="liDaftarTamu"><a class="nav-link" href="{{ URL::to('/pelanggan/daftar_tamu') }}"><i
+                            class="fas fa-users"></i> <span>Daftar tamu</span></a></li>
+
+                <li class="" id="liTamuUndangan"><a class="nav-link" href="{{ URL::to('/tamu_undangan') }}"><i
+                            class="fas fa-qrcode"></i> <span>Tamu undangan</span></a></li>
+
+                <li class="" id="liRegistrasi"><a class="nav-link" href="{{ URL::to('/pelanggan/registrasi') }}"><i
+                            class="fas fa-address-card"></i> <span>Registrasi</span></a></li>
+
                 {{-- END OF MENU ADMIN --}}
             @endif
 

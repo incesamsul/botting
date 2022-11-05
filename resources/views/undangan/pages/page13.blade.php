@@ -6,7 +6,7 @@
         <p>
             {{ $informasi->quotes }}
         </p>
-        <p class="mt-5">
+        <p class="mt-2">
             --unknown
         </p>
     </div>

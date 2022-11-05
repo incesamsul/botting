@@ -4,9 +4,9 @@
 
     <div class="mempelai-wrapper  text-center text-{{ $nama_tema }}">
         <span class="mempelai ">Lokasi acara</span>
-        <i class="fa-solid fa-compass icon mt-5"></i>
-        <span class="text-main mt-5">Klik tombol untuk membuka peta</span>
-        <a target="_blank" href="https://www.google.co.id/maps/place/{{ $informasi->lokasi_akad }}" class="mt-5 btn border-{{ $nama_tema }}">Buka</a>
+        <i class="fa-solid fa-compass icon mt-2"></i>
+        <span class="text-main mt-2">Klik tombol untuk membuka peta</span>
+        <a target="_blank" href="https://www.google.co.id/maps/place/{{ $informasi->lokasi_akad }}" class="mt-2 my-btn border-{{ $nama_tema }}">Buka</a>
     </div>
 
 </div>

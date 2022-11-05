@@ -5,11 +5,11 @@
     <div class="mempelai-wrapper text-center text-{{ $nama_tema }} ">
         <span class="mempelai ">Akad nikah</span>
         <i class="icon fa-regular fa-calendar-check"></i>
-        <span class="text-main mt-5">{{ date('l, d F Y', strtotime($informasi->tgl_akad)) }}</span>
-        <span class="text-main mt-5">{{ $informasi->jam_akad }} - Selesai</span>
-        <i class="fa-solid fa-mountain-city icon mt-5"></i>
-        <span class="text-main mt-5">Lokasi akad</span>
-        <span class="text-main mt-5">{{ $informasi->lokasi_akad }}</span>
+        <span class="text-main mt-2">{{ date('l, d F Y', strtotime($informasi->tgl_akad)) }}</span>
+        <span class="text-main mt-2">{{ $informasi->jam_akad }} - Selesai</span>
+        <i class="fa-solid fa-mountain-city icon mt-2"></i>
+        <span class="text-main mt-2">Lokasi akad</span>
+        <span class="text-main mt-2">{{ $informasi->lokasi_akad }}</span>
     </div>
 
 </div>

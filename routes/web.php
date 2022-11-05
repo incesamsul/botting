@@ -9,6 +9,8 @@ use App\Http\Controllers\InformasiController;
 use App\Http\Controllers\TemaUser;
 
 use App\Http\Controllers\Pelanggan;
+use App\Http\Controllers\TamuController;
+use App\Http\Controllers\TransaksiController;
 use App\Http\Controllers\UserController;
 
 use Illuminate\Support\Facades\Route;
@@ -55,8 +57,6 @@ Route::group(['middleware' => ['auth', 'ceklevel:Administrator,percetakan,pelang
     Route::post('/ubah_role', [General::class, 'ubahRole']);
 });
 
-Route::get('/{domain}', [Pelanggan::class, 'undangan']);
-
 // ADMIN ROUTE
 Route::group(['middleware' => ['auth', 'ceklevel:user']], function () {
 });
@@ -85,10 +85,20 @@ Route::group(['middleware' => ['auth', 'ceklevel:pelanggan']], function () {
     Route::group(['prefix' => 'pelanggan'], function () {
         Route::get('/tema', [Pelanggan::class, 'tema']);
         Route::get('/info', [Pelanggan::class, 'info']);
+        Route::get('/daftar_tamu', [Pelanggan::class, 'daftarTamu']);
         Route::get('/info/{jenis_info}', [Pelanggan::class, 'info']);
         Route::get('/publish', [Pelanggan::class, 'publish']);
         Route::get('/pilih_tema/{id_tema}', [TemaUser::class, 'store']);
         Route::post('/simpan_domain', [Pelanggan::class, 'simpanDomain']);
+        Route::get('/registrasi', [Pelanggan::class, 'registrasi']);
+        Route::post('/transaksi', [TransaksiController::class, 'store']);
+        Route::get('/detail_transaksi/{reference}', [TransaksiController::class, 'detailTransaksi']);
+
+        // CRUD TAMU
+        Route::post('/create_daftar_tamu', [TamuController::class, 'store']);
+        Route::post('/update_daftar_tamu', [TamuController::class, 'update']);
+        Route::post('/delete_daftar_tamu', [TamuController::class, 'delete']);
+
 
         // CRUD INFO
         Route::post('/save_mempelai_pria', [InformasiController::class, 'saveMempelaiPria']);
@@ -100,3 +110,9 @@ Route::group(['middleware' => ['auth', 'ceklevel:pelanggan']], function () {
         Route::post('/save_gallery', [InformasiController::class, 'saveGallery']);
     });
 });
+
+Route::get('/tamu_undangan', [Pelanggan::class, 'tamuUndangan']);
+Route::get('/terima_tamu/{kode_undangan}', [Pelanggan::class, 'terimaTamu']);
+
+Route::get('/{domain}', [Pelanggan::class, 'undangan']);
+Route::get('/{domain}/{kode_undangan}', [Pelanggan::class, 'undangan']);

@@ -11,6 +11,11 @@ use function PHPUnit\Framework\isNull;
 
 
 
+function convertNoHp($noHp)
+{
+    return '62' . substr($noHp, 1);
+}
+
 function getInformasiUndangan($idUser)
 {
     return Informasi::where('id_user', $idUser)->first();

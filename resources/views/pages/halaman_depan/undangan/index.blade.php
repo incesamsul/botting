@@ -24,6 +24,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
 
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
 
 </head>
 <body>
@@ -39,14 +42,29 @@
             Your browser does not support the audio element.
         </audio>
 
+        @if ($tamu && $tamu != null)
+        <div class="tamu-wrapper">
+            <div class="sambutan-tamu text-center p-4">
+                <span>HARI PERNIKAHAN</span>
+                    <h3>{{ $informasi ? $informasi->nama_mempelai_pria : '' }} &
+                        {{ $informasi ? $informasi->nama_mempelai_wanita : '' }}</h3>
+                    <p>Kepada Bapak/Ibu/Saudara/i</p>
+                    <strong>{{ $tamu->nama_tamu }}</strong>
+                    <small><i>Mohon maaf bila ada kesalahan dalam penulisan nama/gelar</i></small>
+                    <button id="buka-undangan" class="mt-1 btn btn-outline-secondary">
+                        buka undangan
+                    </button>
+            </div>
+        </div>
+        @endif
 
         <header class="header" id="header">
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a href="#page/5" class="nav__link active-link">
-                            <i class='bx bx-home-alt nav__icon'></i>
-                            <span class="nav__name">Home</span>
+                        <a href="#page/5" class="nav__link active-link btn-qrcode" data-bs-toggle="modal" data-bs-target="#qrcodeModal">
+                            <i class='bx bx-barcode-reader nav__icon'></i>
+                            <span class="nav__name">QRCode</span>
                         </a>
                     </li>
 
@@ -72,14 +90,14 @@
                     </li>
 
                     <li class="nav__item">
-                        <a href="#page/5" class="nav__link">
-                            <i class='bx bx-briefcase-alt nav__icon'></i>
+                        <a href="#page/5" class="nav__link" data-bs-toggle="modal" data-bs-target="#giftModal">
+                            <i class='bx bx-gift nav__icon'></i>
                             <span class="nav__name">hadiah</span>
                         </a>
                     </li>
 
                     <li class="nav__item">
-                        <a href="#page/5" class="nav__link">
+                        <a href="#page/5" class="nav__link" data-bs-toggle="modal" data-bs-target="#commentModal">
                             <i class='bx bx-message-square-detail nav__icon'></i>
                             <span class="nav__name">Komentar</span>
                         </a>
@@ -91,8 +109,8 @@
         <nav class="floating-menu">
             <ul class="main-menu">
                 <li>
-                    <a href="{{ URL::to('/#choose_theme') }}" class="ripple">
-                        <i class="fas fa-home fa-lg"></i>
+                    <a href="{{ URL::to('/#choose_theme') }}" class="ripple btn-qrcode" data-bs-toggle="modal" data-bs-target="#qrcodeModal">
+                        <i class="fas fa-qrcode fa-lg"></i>
                     </a>
                 </li>
                 <li>
@@ -102,17 +120,17 @@
                 </li>
                 <li>
                     <a href="#" class="ripple">
-                        <i class="far fa-address-card fa-lg"></i>
+                        <i class="fas fa-book fa-lg"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="#page/4" class="ripple">
-                        <i class="fas fa-cogs fa-lg"></i>
+                    <a href="#page/4" class="ripple" data-bs-toggle="modal" data-bs-target="#giftModal">
+                        <i class="fas fa-gift fa-lg"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="ripple">
-                        <i class="fas fa-qrcode fa-lg"></i>
+                    <a href="#" class="ripple" data-bs-toggle="modal" data-bs-target="#commentModal">
+                        <i class="fas fa-comment fa-lg"></i>
                     </a>
                 </li>
             </ul>
@@ -188,9 +206,135 @@
     </div>
 
 
+        {{-- MODAL HERE --}}
+
+  <!-- Comment  Modal -->
+  <div class="modal fade" id="commentModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Komentar</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="card">
+              <div class="card-body">
+                  <div class="user-comment d-flex align-items-start">
+                      <img src="{{ asset('img/default/nopict.jpg') }}" alt="" class="rounded mx-2" width="30">
+                        <p>Lorem - 20-oct-2020</p>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea debitis eaque, nobis quia illum delectus?</p>
+              </div>
+          </div>
+          <div class="card mt-3">
+              <div class="card-body">
+                  <div class="user-comment d-flex align-items-start">
+                      <img src="{{ asset('img/default/nopict.jpg') }}" alt="" class="rounded mx-2" width="30">
+                        <p>Lorem - 20-oct-2020</p>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea debitis eaque, nobis quia illum delectus?</p>
+              </div>
+          </div>
+          <div class="card mt-3">
+              <div class="card-body">
+                  <div class="user-comment d-flex align-items-start">
+                      <img src="{{ asset('img/default/nopict.jpg') }}" alt="" class="rounded mx-2" width="30">
+                        <p>Lorem - 20-oct-2020</p>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea debitis eaque, nobis quia illum delectus?</p>
+              </div>
+          </div>
+          <div class="card mt-3">
+              <div class="card-body">
+                  <div class="user-comment d-flex align-items-start">
+                      <img src="{{ asset('img/default/nopict.jpg') }}" alt="" class="rounded mx-2" width="30">
+                        <p>Lorem - 20-oct-2020</p>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea debitis eaque, nobis quia illum delectus?</p>
+              </div>
+          </div>
+          <div class="card mt-3">
+              <div class="card-body">
+                  <div class="user-comment d-flex align-items-start">
+                      <img src="{{ asset('img/default/nopict.jpg') }}" alt="" class="rounded mx-2" width="30">
+                        <p>Lorem - 20-oct-2020</p>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea debitis eaque, nobis quia illum delectus?</p>
+              </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+            <textarea class="form-control" name="komentar" id="komentar" cols="30" rows="4"></textarea>
+          <button type="button" class="btn btn-secondary">Kirim</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gift  Modal -->
+  <div class="modal fade" id="giftModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Beri hadiah</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Qrcode  Modal -->
+  <div class="modal fade" id="qrcodeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Qrcode</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body d-flex align-items-center justify-content-center">
+            <div id="qrcode_undangan"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        {{-- END OF MODAL HERE --}}
+
+
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+<script src="{{ asset('plugins/scanner/html5-qrcode.min.js') }}"></script>
+  <script src="{{ asset('plugins/qrcodejs/qrcode.min.js') }}"></script>
+
     <script type="text/javascript">
 
-$(document).on("click", "#sampul", function(){
+        document.addEventListener("DOMContentLoaded", function() {
+            $('.btn-qrcode').on('click',function(){
+                let qrcodeText = '{{ $tamu ? $tamu->kode_undangan : "" }}';
+                var qrcode = new QRCode("qrcode_undangan", {
+                    text: qrcodeText,
+                    width: 300,
+                    height: 300,
+                    colorDark : "#000000",
+                    colorLight : "#ffffff",
+                    correctLevel : QRCode.CorrectLevel.H
+                });
+
+            });
+
+        });
+
+        $(document).on('click','#buka-undangan',function(){
+            $('.tamu-wrapper').css('display','none');
+            var backsoundEl = document.getElementById("backsound");
+            backsoundEl.play();
+        })
+
+        $(document).on("click", "#sampul", function(){
             let link = $(this).attr('href');
             document.location.href = link;
         });

@@ -407,8 +407,8 @@
         <div class="row mt-5">
             <div class="col-sm-4 mt-100">
                 <div class="border-0 card pricing-card d-flex justify-content-center align-items-center p-4 hidden">
-                    <h4 class="text-main">Gold</h4>
-                    <h1 class="my-5">Rp. 49.000</h1>
+                    <h4 class="text-main pt-5">Free</h4>
+                    <h1 class="my-5">Rp. 0,-</h1>
                     <div class="pricing-item d-flex flex-row">
                         <i class="fas fa-check-circle mx-3 text-main"></i>
                         <p class="text-secondary">Edit tanpa batas</p>
@@ -433,59 +433,12 @@
                         <i class="fas fa-check-circle mx-3 text-main"></i>
                         <p class="text-secondary">Masa aktif 1 jam</p>
                     </div>
-                    <button class="my-button my-3">Pilih paket</button>
+                    <a href="{{ URL::to('/register') }}" class="my-button my-3">Pilih paket</a>
                 </div>
             </div>
             <div class="col-sm-4">
                 <div class="border-0 card pricing-card d-flex justify-content-center align-items-center p-4 hidden">
-                    <h4 class="text-main">Diamond</h4>
-                    <h1 class="my-5">Rp. 99.000</h1>
-                    <div class="pricing-item d-flex flex-row">
-                        <i class="fas fa-check-circle mx-3 text-main"></i>
-                        <p class="text-secondary">Edit tanpa batas</p>
-                    </div>
-                    <div class="pricing-item d-flex flex-row">
-                        <i class="fas fa-check-circle mx-3 text-main"></i>
-                        <p class="text-secondary">Amplop digital</p>
-                    </div>
-                    <div class="pricing-item d-flex flex-row">
-                        <i class="fas fa-check-circle mx-3 text-main"></i>
-                        <p class="text-secondary">Hitung mundur</p>
-                    </div>
-                    <div class="pricing-item d-flex flex-row">
-                        <i class="fas fa-check-circle mx-3 text-main"></i>
-                        <p class="text-secondary">quotes</p>
-                    </div>
-                    <div class="pricing-item d-flex flex-row">
-                        <i class="fas fa-check-circle mx-3 text-main"></i>
-                        <p class="text-secondary">Background musik</p>
-                    </div>
-                    <div class="pricing-item d-flex flex-row">
-                        <i class="fas fa-check-circle mx-3 text-main"></i>
-                        <p class="text-secondary">Masa aktif 1 jam</p>
-                    </div>
-                    <div class="pricing-item d-flex flex-row">
-                        <i class="fas fa-check-circle mx-3 text-main"></i>
-                        <p class="text-secondary">Hitung mundur</p>
-                    </div>
-                    <div class="pricing-item d-flex flex-row">
-                        <i class="fas fa-check-circle mx-3 text-main"></i>
-                        <p class="text-secondary">quotes</p>
-                    </div>
-                    <div class="pricing-item d-flex flex-row">
-                        <i class="fas fa-check-circle mx-3 text-main"></i>
-                        <p class="text-secondary">Background musik</p>
-                    </div>
-                    <div class="pricing-item d-flex flex-row">
-                        <i class="fas fa-check-circle mx-3 text-main"></i>
-                        <p class="text-secondary">Masa aktif 1 jam</p>
-                    </div>
-                    <button class="my-button my-3">Pilih paket</button>
-                </div>
-            </div>
-            <div class="col-sm-4 mt-100">
-                <div class="border-0 card pricing-card d-flex justify-content-center align-items-center p-4 hidden">
-                    <h4 class="text-main">Silver</h4>
+                    <h4 class="text-main pt-5">Reguler</h4>
                     <h1 class="my-5">Rp. 149.000</h1>
                     <div class="pricing-item d-flex flex-row">
                         <i class="fas fa-check-circle mx-3 text-main"></i>
@@ -509,9 +462,52 @@
                     </div>
                     <div class="pricing-item d-flex flex-row">
                         <i class="fas fa-check-circle mx-3 text-main"></i>
-                        <p class="text-secondary">Masa aktif 1 jam</p>
+                        <p class="text-secondary">Masa aktif selamanya</p>
                     </div>
-                    <button class="my-button my-3">Pilih paket</button>
+                    <div class="pricing-item d-flex flex-row">
+                        <i class="fas fa-check-circle mx-3 text-main"></i>
+                        <p class="text-secondary">Hitung mundur</p>
+                    </div>
+                    <div class="pricing-item d-flex flex-row">
+                        <i class="fas fa-check-circle mx-3 text-main"></i>
+                        <p class="text-secondary">gallery</p>
+                    </div>
+                    <div class="pricing-item d-flex flex-row">
+                        <i class="fas fa-check-circle mx-3 text-main"></i>
+                        <p class="text-secondary">love story</p>
+                    </div>
+                    <a href="{{ URL::to('/register') }}" class="my-button my-3">Pilih paket</a>
+                </div>
+            </div>
+            <div class="col-sm-4 mt-100">
+                <div class="border-0 card pricing-card d-flex justify-content-center align-items-center p-4 hidden">
+                    <h4 class="text-main pt-5">Custom</h4>
+                    <h1 class="my-5">Rp. --</h1>
+                    <div class="pricing-item d-flex flex-row">
+                        <i class="fas fa-check-circle mx-3 text-main"></i>
+                        <p class="text-secondary">Edit tanpa batas</p>
+                    </div>
+                    <div class="pricing-item d-flex flex-row">
+                        <i class="fas fa-check-circle mx-3 text-main"></i>
+                        <p class="text-secondary">Amplop digital</p>
+                    </div>
+                    <div class="pricing-item d-flex flex-row">
+                        <i class="fas fa-check-circle mx-3 text-main"></i>
+                        <p class="text-secondary">Hitung mundur</p>
+                    </div>
+                    <div class="pricing-item d-flex flex-row">
+                        <i class="fas fa-check-circle mx-3 text-main"></i>
+                        <p class="text-secondary">quotes</p>
+                    </div>
+                    <div class="pricing-item d-flex flex-row">
+                        <i class="fas fa-check-circle mx-3 text-main"></i>
+                        <p class="text-secondary">Background musik</p>
+                    </div>
+                    <div class="pricing-item d-flex flex-row">
+                        <i class="fas fa-check-circle mx-3 text-main"></i>
+                        <p class="text-secondary">Request tema dan ilustrasi</p>
+                    </div>
+                    <a href="{{ URL::to('/register') }}" class="my-button my-3">Pilih paket</a>
                 </div>
             </div>
         </div>

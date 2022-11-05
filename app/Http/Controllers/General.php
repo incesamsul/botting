@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-
+use App\Models\Tamu;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Filesystem\Filesystem;
@@ -20,7 +20,10 @@ class General extends Controller
 
     public function dashboard()
     {
-        return view('pages.dashboard.index');
+        $data['hadir'] = Tamu::where('status_kehadiran', '1')->get();
+        $data['tidak_hadir'] = Tamu::where('status_kehadiran', '0')->get();
+        $data['total_tamu'] = Tamu::all();
+        return view('pages.dashboard.index', $data);
     }
 
     public function profile()

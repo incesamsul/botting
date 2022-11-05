@@ -4,7 +4,7 @@
     <div class="mempelai-wrapper text-center text-{{ $nama_tema }}">
         <span class="mempelai">Terimakasih ...</span>
         <p>Kehadiranmu sangat berarti.</p>
-        <p class="mt-5">
+        <p class="mt-2">
             --fdomh
         </p>
     </div>

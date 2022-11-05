@@ -126,10 +126,10 @@ function getKetNilai(nilai) {
 //     "responsive": true
 // });
 
-// let dataTable = $('#table-data').DataTable({
-//     "lengthChange": false,
-//     "responsive": true
-// });
+let dataTable = $('#table-data').DataTable({
+    "lengthChange": false,
+    "responsive": true
+});
 $("#searchbox").on("keyup search input paste cut", function() {
     dataTable.search(this.value).draw();
 });

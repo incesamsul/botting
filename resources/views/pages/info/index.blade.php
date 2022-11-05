@@ -377,5 +377,7 @@
     </section>
 @endsection
 @section('script')
-    <script></script>
+    <script>
+        $('#liInformasi').addClass('active');
+    </script>
 @endsection
