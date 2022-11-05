@@ -15,6 +15,9 @@
     font-family: 'Great Vibes', cursive;
 }
 
+
+/* THEME TEXT */
+
 .text-pink_flower {
     color: #F9C4C7 !important;
 }
@@ -31,6 +34,73 @@
     border: 2px solid #DE0000;
 }
 
+.text-aesthetic {
+    color: #8C754F !important;
+}
+
+.border-aesthetic {
+    border: 2px solid #8C754F;
+}
+
+.text-elegant_blue {
+    color: #8891B0 !important;
+}
+
+.border-elegant_blue {
+    border: 2px solid #8891B0;
+}
+
+.text-elegant_cream {
+    color: #183153 !important;
+}
+
+.border-elegant_cream {
+    border: 2px solid #183153;
+}
+
+.text-elegant_navy {
+    color: #1a1e27 !important;
+}
+
+.border-elegant_navy {
+    border: 2px solid #1a1e27;
+}
+
+.text-kembang_sepatu {
+    color: #8c7261 !important;
+}
+
+.border-kembang_sepatu {
+    border: 2px solid #8c7261;
+}
+
+.text-sweet_purple {
+    color: #564776 !important;
+}
+
+.border-sweet_purple {
+    border: 2px solid #564776;
+}
+
+.text-maroon_flower {
+    color: #a05e60 !important;
+}
+
+.border-maroon_flower {
+    border: 2px solid #a05e60;
+}
+
+.text-summer {
+    color: #A88171 !important;
+}
+
+.border-summer {
+    border: 2px solid #A88171;
+}
+
+
+/* END OF THEME TXT */
+
 .and {
     font-size: 71px !important;
 }
@@ -44,7 +114,7 @@
 }
 
 .mempelai-img-frame {
-    top: 60px;
+    top: 50px;
     position: absolute;
     width: 170px !important;
     height: 170px !important;
@@ -81,7 +151,11 @@
 .counter span {
     width: 40px;
     margin-right: 10px;
-    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 30px 10px 30px;
     font-size: 14px;
     border-radius: 20px;
     background-color: white;
@@ -128,4 +202,18 @@
 
 :root {
     --animate-delay: 0.5s;
+}
+
+@media only screen and (max-width: 400px) {
+    .counter span {
+        margin-right: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 30px 10px 30px;
+        font-size: 14px;
+        border-radius: 20px;
+        background-color: white;
+    }
 }

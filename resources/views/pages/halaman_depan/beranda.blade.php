@@ -376,7 +376,7 @@
         <div class="row mt-5">
         @foreach($tema as $row)
             <div class="col-sm-4">
-                <div class="card soft-shadow theme-card border-0 hidden">
+                <div class="card my-3 soft-shadow theme-card border-0 hidden">
                     <img src="{{ asset('data/tema/' . $row->thumbnail_tema) }}" alt="">
                     <div class="caption d-flex flex-row justify-content-between p-4 align-items-center">
                         <h4>{{ $row->nama_tema }}</h4>
@@ -550,27 +550,7 @@
 @section('script')
 <script>
 
-    $('#btn-search').on('click',function(){
-        $('#form-pencarian').css('opacity','1');
-        $('#form-pencarian').css('transform','translateY(-50px)');
 
-        // title
-        $('#pencarian-title').css('opacity','0');
-        $('#pencarian-title').css('transform','translateY(100px)');
-        $(this).css('display','none');
-        $('#btn-close').css('display','block');
-    })
-
-    $('#btn-close').on('click',function(){
-        $('#form-pencarian').css('opacity','0');
-        $('#form-pencarian').css('transform','translateY(-110px)');
-
-        // title
-        $('#pencarian-title').css('opacity','1');
-        $('#pencarian-title').css('transform','translateY(0px)');
-        $(this).css('display','none');
-        $('#btn-search').css('display','block');
-    })
 
 </script>
 @endsection

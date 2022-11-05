@@ -3,8 +3,10 @@
 
     <div class="mempelai-wrapper text-center ">
         <span class="mempelai text-{{ $nama_tema }}">Our Love Story</span>
-        <p>Cerita kisah cinta kita dari awal bertemu sampai lamaran.</p>
-
+        <p>"Shared joy is a double joy; shared sorrow is half a sorrow."</p>
+        <p class="mt-5">
+            -Swedish Proverb.
+        </p>
     </div>
 
 </div>

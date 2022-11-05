@@ -18,21 +18,106 @@
     <script type="text/javascript" src="{{ asset('turnjs/extras/modernizr.2.5.3.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('turnjs/lib/hash.js') }}"></script>
     <link rel="stylesheet" href="{{ asset('turnjs/invitation/css/invitation.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
-</head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="{{ asset('turnjs/invitation/css/bottom-nav.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
 
+
+</head>
 <body>
+
+
+    <audio autoplay controls id="backsound" hidden>
+        <source src="{{ asset('turnjs/audio/backsound.mp3') }}" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
 
     <audio controls id="soundEffect" hidden>
         <source src="{{ asset('turnjs/audio/paperslide.wav') }}" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+            Your browser does not support the audio element.
+        </audio>
+
+
+        <header class="header" id="header">
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#page/5" class="nav__link active-link">
+                            <i class='bx bx-home-alt nav__icon'></i>
+                            <span class="nav__name">Home</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#page/5" class="nav__link btn-volume">
+                            <i class='bx bx-music nav__icon'></i>
+                            <span class="nav__name">Music</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#page/5" class="nav__link">
+                            <i class='bx bx-book-alt nav__icon'></i>
+                            <span class="nav__name">Daftar isi</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item" hidden>
+                        <a href="#page/4" class="nav__link" id="sampul">
+                            <i class='bx bx-book-alt nav__icon'></i>
+                            <span class="nav__name">sampul</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#page/5" class="nav__link">
+                            <i class='bx bx-briefcase-alt nav__icon'></i>
+                            <span class="nav__name">hadiah</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#page/5" class="nav__link">
+                            <i class='bx bx-message-square-detail nav__icon'></i>
+                            <span class="nav__name">Komentar</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <nav class="floating-menu">
+            <ul class="main-menu">
+                <li>
+                    <a href="{{ URL::to('/#choose_theme') }}" class="ripple">
+                        <i class="fas fa-home fa-lg"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="ripple btn-volume-desktop">
+                        <i class="fas fa-volume-off fa-lg"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="ripple">
+                        <i class="far fa-address-card fa-lg"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#page/4" class="ripple">
+                        <i class="fas fa-cogs fa-lg"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="ripple">
+                        <i class="fas fa-qrcode fa-lg"></i>
+                    </a>
+                </li>
+            </ul>
+            <div class="menu-bg"></div>
+        </nav>
     <div id="canvas">
         <div id="book-zoom">
             <div class="sj-book">
@@ -66,7 +151,18 @@
                         <img src="{{ asset('turnjs/invitation/pics/bg/' . $nama_tema . '/bg2.png') }}" alt="">
                     </div>
                 </div>
-                <div class="own-size even"></div>
+                <div class="own-size even">
+                    <div class="sampul" style="position: absolute;">
+                        <div class="cover-effect-right"></div>
+                        <div class="cover-effect-left"></div>
+                        <div class="overlay-effect text-{{ $nama_tema }}">
+                            <span>HARI PERNIKAHAN</span>
+                            <h3>Eren & Mikasa</h3>
+                            <span>10 * 20 * 2022</span>
+                        </div>
+                        <img src="{{ asset('turnjs/invitation/pics/bg/' . $nama_tema .'/bg2.png') }}" alt="">
+                    </div>
+                </div>
                 <div class="hard fixed back-side p21">
                     <div class="depth"></div>
                 </div>
@@ -93,6 +189,58 @@
 
 
     <script type="text/javascript">
+
+$(document).on("click", "#sampul", function(){
+            let link = $(this).attr('href');
+            document.location.href = link;
+        });
+
+
+
+        var playing = false;
+
+        $('.btn-volume').on('click',function(e){
+            e.preventDefault();
+            $(this).toggleClass("down");
+            var backsoundEl = document.getElementById("backsound");
+            backsoundEl.pause();
+            if (playing == false) {
+                backsoundEl.play();
+                playing = true;
+                let pauseHTML = '<i class="bx bx-music nav__icon"></i><span class="nav__name">Music</span>';
+                $(this).html(pauseHTML);
+
+            } else {
+                backsoundEl.pause();
+                playing = false;
+                let pauseHTML = '<i class="bx bx-volume-mute nav__icon"></i><span class="nav__name">Music</span>';
+                $(this).html(pauseHTML);
+            }
+        })
+
+        $('.btn-volume-desktop').on('click',function(e){
+            e.preventDefault();
+            $(this).toggleClass("down");
+            var backsoundEl = document.getElementById("backsound");
+            backsoundEl.pause();
+            if (playing == false) {
+                backsoundEl.play();
+                playing = true;
+                let pauseHTML = '<i class="fas fa-volume-off fa-lg"></i>';
+                $(this).html(pauseHTML);
+
+            } else {
+                backsoundEl.pause();
+                playing = false;
+                let pauseHTML = '<i class="fas fa-volume-xmark fa-lg"></i>';
+                $(this).html(pauseHTML);
+            }
+
+        })
+
+
+
+
         function loadApp() {
 
 
@@ -273,6 +421,9 @@
 
             if (detectMob()) {
                 display = 'single';
+                $(document).ready(function(){
+                    $("#sampul").trigger("click");
+                });
             } else {
                 display = 'double';
             }
@@ -342,13 +493,13 @@
                     turned: function(e, page, view) {
 
                         $('.book-content').addClass('animate__animated');
-                        $('.book-content').addClass('animate__fadeInDown');
+                        $('.book-content').addClass('animate__fadeIn');
                         $('.book-content').addClass('animate__delay-1s');
 
 
                         setTimeout(() => {
                             $('.book-content').removeClass('animate__animated');
-                            $('.book-content').removeClass('animate__fadeInDown');
+                            $('.book-content').removeClass('animate__fadeIn');
                             $('.book-content').removeClass('animate__delay-1s');
                         }, 1000);
 

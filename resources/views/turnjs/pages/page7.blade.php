@@ -7,7 +7,7 @@
         <img src="{{ asset('turnjs/invitation/pics/pria.jpg?p') }}" class="mempelai-img">
         <span class="mempelai text-{{ $nama_tema }}">Eren yeager</span>
         <span class="text-secondary">Anak dari</span>
-        <span class="text-secondary mt-5">Grisha</span>
+        <span class="text-secondary mt-2">Grisha</span>
         <span class="text-secondary">&</span>
         <span class="text-secondary">Carla</span>
     </div>

@@ -6,7 +6,7 @@
         <p>
             “The only thing we're allowed to believe is that we won't regret the choice we made.” “The world is merciless, and it's also very beautiful.” “Once I'm dead, I won't even be able to remember you.
         </p>
-        <p class="mt-5">
+        <p class="mt-2">
             --AOT
         </p>
     </div>

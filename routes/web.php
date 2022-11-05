@@ -41,8 +41,8 @@ Route::get('/get_undangan_pages/{page}', [Home::class, 'getUndanganPages']);
 Route::group(['middleware' => ['guest']], function () {
     Route::get('/login', [LoginController::class, 'login'])->name('login');
     Route::get('/register', [LoginController::class, 'register']);
-    Route::get('/{domain}', [Pelanggan::class, 'undangan']);
 });
+
 
 // GENERAL CONTROLLER ROUTE
 Route::group(['middleware' => ['auth', 'ceklevel:Administrator,percetakan,pelanggan']], function () {
@@ -54,6 +54,8 @@ Route::group(['middleware' => ['auth', 'ceklevel:Administrator,percetakan,pelang
     Route::post('/ubah_foto_profile', [General::class, 'ubahFotoProfile']);
     Route::post('/ubah_role', [General::class, 'ubahRole']);
 });
+
+Route::get('/{domain}', [Pelanggan::class, 'undangan']);
 
 // ADMIN ROUTE
 Route::group(['middleware' => ['auth', 'ceklevel:user']], function () {

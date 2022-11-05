@@ -21,7 +21,7 @@
                 <br> detik
             </span>
         </div>
-        <p class="text-main mt-5">
+        <p class="text-main mt-2">
             Menuju Hari Istimewa Kami dan kami berharap Bapak/Ib/Saudara/i menjadi bagian dari hari istimewa kami
         </p>
     </div>

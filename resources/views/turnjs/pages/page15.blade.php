@@ -3,9 +3,9 @@
 
     <div class="mempelai-wrapper  text-center ">
         <span class="mempelai text-{{ $nama_tema }}">Our Love Story</span>
-        <p>Lorem ipsum dolor sit amet consect sint deleniti, error voluptatum adipisci unde.</p>
-        <p class="mt-5">
-            --silorem
+        <p>"Shared joy is a double joy; shared sorrow is half a sorrow."</p>
+        <p class="mt-2">
+            -Swedish Proverb.
         </p>
     </div>
 
