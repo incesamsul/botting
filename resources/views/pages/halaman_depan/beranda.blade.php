@@ -18,9 +18,7 @@
                     Undangan Digital
                   </h1>
                   <p>
-                    Solusi undangan pernikahan digital
-                    praktis, hemat dan modern
-                    hehehe hehehe hehehe heheh.
+                    Undangan Digital Premium, Elegan, dan Aesthetik yang dapat dibuat dengan mudah hanya dalam hitungan menit.
                   </p>
                   <a href="{{ URL::to('/#pricing') }}">
                     Lebih lanjut
@@ -48,9 +46,7 @@
                         Undangan Digital
                       </h1>
                       <p>
-                        Solusi undangan pernikahan digital
-                        praktis, hemat dan modern
-                        hehehe hehehe hehehe heheh.
+                        kamu bisa request ilustrasi dan masih banyak lagi. Yuk Sebar Undangan Pernikahanmu bersama botting.id :)
                       </p>
                       <a href="{{ URL::to('/#pricing') }}">
                         Lebih lanjut
@@ -90,7 +86,7 @@
         <div class="row ">
             <div class="col-sm-12">
                 <h4 class="mt-5 text-center">Mengapa memilih botting ?</h4>
-            <p class="text-center text-secondary">Yah karena mau hehehe masa jomblo terus</p>
+            <p class="text-center text-secondary">Tema yang unik, menarik dan modern</p>
             </div>
         </div>
         <div class="row mt-5">

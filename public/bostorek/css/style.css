@@ -157,7 +157,8 @@ a:focus {
 }
 
 .navbar-brand img {
-    filter: invert(70%);
+    margin-top: 20px;
+    /* filter: invert(70%); */
 }
 
 .custom_nav-container {
@@ -838,7 +839,7 @@ a:focus {
     background-color: #00A0B9;
 }
 
-.bg-second.my-custom-btn:focus{
+.bg-second.my-custom-btn:focus {
     background-color: #0081B9 !important;
 }
 
@@ -852,8 +853,6 @@ a:focus {
     padding-top: 11px !important;
     padding-bottom: 33px !important;
 }
-
-
 
 .my-btn-nav {
     border-radius: 90px;

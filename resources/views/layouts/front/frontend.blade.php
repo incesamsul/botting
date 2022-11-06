@@ -47,10 +47,10 @@
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container pr-4 ">
           <a class="navbar-brand ml-5" href="{{ URL::to('/') }}">
-            <img src="{{ asset('images/onlylogo.png') }}" alt="" width="90">
-            <span>
+            <img src="{{ asset('images/botting_samping.png') }}" alt="" width="200">
+            {{-- <span>
               Botting
-            </span>
+            </span> --}}
           </a>
 
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

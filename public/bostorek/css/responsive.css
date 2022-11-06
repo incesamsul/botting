@@ -34,6 +34,11 @@
 @media (max-width: 480px) {}
 
 @media (max-width: 420px) {
+    .navbar-brand img {
+        margin-top: 0px;
+        width: 140px;
+        /* filter: invert(70%); */
+    }
     .custom_nav-container .navbar-toggler span {
         background-color: #34364A;
     }

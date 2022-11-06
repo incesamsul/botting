@@ -47,7 +47,7 @@
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a href="#page/5" class="nav__link active-link">
+                        <a href="{{ URL::to('/#choose_theme') }}" class="nav__link active-link">
                             <i class='bx bx-home-alt nav__icon'></i>
                             <span class="nav__name">Home</span>
                         </a>

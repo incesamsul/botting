@@ -20,9 +20,9 @@ class General extends Controller
 
     public function dashboard()
     {
-        $data['hadir'] = Tamu::where('status_kehadiran', '1')->get();
-        $data['tidak_hadir'] = Tamu::where('status_kehadiran', '0')->get();
-        $data['total_tamu'] = Tamu::all();
+        $data['hadir'] = Tamu::where('id_user', auth()->user()->id)->where('status_kehadiran', '1')->get();
+        $data['tidak_hadir'] = Tamu::where('id_user', auth()->user()->id)->where('status_kehadiran', '0')->get();
+        $data['total_tamu'] = Tamu::where('id_user', auth()->user()->id)->get();
         return view('pages.dashboard.index', $data);
     }
 

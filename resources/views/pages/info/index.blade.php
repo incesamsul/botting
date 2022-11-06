@@ -169,11 +169,11 @@
                             </div>
                             <div class="form-group">
                                 <label for="nama_mempelai_wanita">Nama Mempelai wanita</label>
-                                <input type="text" class="form-control" name="nama_mempelai_wanita" id="nama_mempelai_wanita" value="{{ $info ? $info->nama_ibu_mempelai_wanita : '' }}">
+                                <input type="text" class="form-control" name="nama_mempelai_wanita" id="nama_mempelai_wanita" value="{{ $info ? $info->nama_mempelai_wanita : '' }}">
                             </div>
                             <div class="form-group">
                                 <label for="nama_ayah_mempelai_wanita">Nama Ayah Mempelai wanita</label>
-                                <input type="text" class="form-control" name="nama_ayah_mempelai_wanita" id="nama_ayah_mempelai_wanita" value="{{ $info ? $info->nama_ibu_mempelai_wanita : '' }}">
+                                <input type="text" class="form-control" name="nama_ayah_mempelai_wanita" id="nama_ayah_mempelai_wanita" value="{{ $info ? $info->nama_ayah_mempelai_wanita : '' }}">
                             </div>
                             <div class="form-group">
                                 <label for="nama_ibu_mempelai_wanita">Nama Ibu Mempelai wanita</label>

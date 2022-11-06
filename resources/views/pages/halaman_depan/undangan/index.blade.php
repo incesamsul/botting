@@ -175,8 +175,9 @@
                         <div class="cover-effect-left"></div>
                         <div class="overlay-effect text-{{ $nama_tema }}">
                             <span>HARI PERNIKAHAN</span>
-                            <h3>Eren & Mikasa</h3>
-                            <span>10 * 20 * 2022</span>
+                            <h3>{{ $informasi ? $informasi->nama_mempelai_pria : '' }} &
+                                {{ $informasi ? $informasi->nama_mempelai_wanita : '' }}</h3>
+                            <span>{{ $informasi ? $informasi->tgl_akad : '' }}</span>
                         </div>
                         <img src="{{ asset('turnjs/invitation/pics/bg/' . $nama_tema .'/bg2.png') }}" alt="">
                     </div>
