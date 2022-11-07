@@ -79,7 +79,7 @@
                 <i class="fa fa-search" aria-hidden="true"></i>
               </button>
             </from>
-            <a class="nav-link my-btn-nav bg-second text-white" href="{{ URL::to('/login') }}">Login</a>
+            <a class="nav-link mobile-mt-3 my-btn-nav bg-second text-white" href="{{ URL::to('/login') }}">Login</a>
           </div>
         </nav>
       </div>
