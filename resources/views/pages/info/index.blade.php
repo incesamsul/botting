@@ -120,7 +120,7 @@
                         <h4>Informasi mempelai pria</h4>
                     </div>
                     <div class="card-body">
-                        <form action="{{ URL::to('/pelanggan/save_mempelai_pria') }}" method="POST" enctype="multipart/form-data">
+                        <form class="formInformasi" action="{{ URL::to('/pelanggan/save_mempelai_pria') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
                                 <label for="foto_mempelai_pria">Foto Mempelai pria</label>
@@ -143,7 +143,7 @@
                                 <input type="text" class="form-control" name="nama_ibu_mempelai_pria" id="nama_ibu_mempelai_pria" value="{{ $info ? $info->nama_ibu_mempelai_pria : '' }}">
                             </div>
                             <div class="form-group">
-                                <button type="submit" class="btn bg-main text-white">Simpan</button>
+                                <button type="submit" class="btn bg-main text-white btn-simpan">Simpan</button>
                             </div>
                         </form>
                     </div>
@@ -157,7 +157,7 @@
                         <h4>Informasi mempelai wanita</h4>
                     </div>
                     <div class="card-body">
-                        <form action="{{ URL::to('/pelanggan/save_mempelai_wanita') }}" method="POST" enctype="multipart/form-data">
+                        <form class="formInformasi" action="{{ URL::to('/pelanggan/save_mempelai_wanita') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
                                 <label for="foto_mempelai_wanita">Foto Mempelai wanita</label>
@@ -180,7 +180,7 @@
                                 <input type="text" class="form-control" name="nama_ibu_mempelai_wanita" id="nama_ibu_mempelai_wanita" value="{{ $info ? $info->nama_ibu_mempelai_wanita : '' }}">
                             </div>
                             <div class="form-group">
-                                <button type="submit" class="btn bg-main text-white">Simpan</button>
+                                <button type="submit" class="btn bg-main text-white btn-simpan">Simpan</button>
                             </div>
                         </form>
                     </div>
@@ -196,7 +196,7 @@
                         <h4>Informasi Akad</h4>
                     </div>
                     <div class="card-body">
-                        <form action="{{ URL::to('/pelanggan/save_akad') }}" method="POST" enctype="multipart/form-data">
+                        <form class="formInformasi" action="{{ URL::to('/pelanggan/save_akad') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
                                 <label for="tgl_akad">Tgl akad</label>
@@ -211,7 +211,7 @@
                                 <input type="text" class="form-control" name="lokasi_akad" id="lokasi_akad" value="{{ $info ? $info->lokasi_akad : '' }}">
                             </div>
                             <div class="form-group">
-                                <button type="submit" class="btn bg-main text-white">Simpan</button>
+                                <button type="submit" class="btn bg-main text-white btn-simpan">Simpan</button>
                             </div>
                         </form>
                     </div>
@@ -225,7 +225,7 @@
                         <h4>Informasi resepsi</h4>
                     </div>
                     <div class="card-body">
-                        <form action="{{ URL::to('/pelanggan/save_resepsi') }}" method="POST" enctype="multipart/form-data">
+                        <form class="formInformasi" action="{{ URL::to('/pelanggan/save_resepsi') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
                                 <label for="tgl_resepsi">Tgl resepsi</label>
@@ -240,7 +240,7 @@
                                 <input type="text" class="form-control" name="lokasi_resepsi" id="lokasi_resepsi" value="{{ $info ? $info->lokasi_resepsi : '' }}">
                             </div>
                             <div class="form-group">
-                                <button type="submit" class="btn bg-main text-white">Simpan</button>
+                                <button type="submit" class="btn bg-main text-white btn-simpan">Simpan</button>
                             </div>
                         </form>
                     </div>
@@ -256,14 +256,14 @@
                         <h4>quotes</h4>
                     </div>
                     <div class="card-body">
-                        <form action="{{ URL::to('/pelanggan/save_quotes') }}" method="POST" enctype="multipart/form-data">
+                        <form class="formInformasi" action="{{ URL::to('/pelanggan/save_quotes') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
                                 <label for="quotes">Quotes</label>
                                 <textarea class="form-control" name="quotes" id="quotes" cols="30" rows="10" >{{ $info ? $info->quotes : '' }}</textarea>
                             </div>
                             <div class="form-group">
-                                <button type="submit" class="btn bg-main text-white">Simpan</button>
+                                <button type="submit" class="btn bg-main text-white btn-simpan">Simpan</button>
                             </div>
                         </form>
                     </div>
@@ -279,7 +279,7 @@
                         <h4>Kisah cinta</h4>
                     </div>
                     <div class="card-body">
-                        <form action="{{ URL::to('/pelanggan/save_kisah_cinta') }}" method="POST" enctype="multipart/form-data">
+                        <form class="formInformasi" action="{{ URL::to('/pelanggan/save_kisah_cinta') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
                                 <label for="lokasi_pertama_ketemu">lokasi_pertama_ketemu</label>
@@ -314,7 +314,7 @@
                                 <textarea class="form-control" name="cerita_lamaran" id="cerita_lamaran" cols="30" rows="10">{{ $info ? $info->cerita_lamaran : '' }}</textarea>
                             </div>
                             <div class="form-group">
-                                <button type="submit" class="btn bg-main text-white">Simpan</button>
+                                <button type="submit" class="btn bg-main text-white btn-simpan">Simpan</button>
                             </div>
                         </form>
                     </div>
@@ -330,7 +330,7 @@
                         <h4>Gallery</h4>
                     </div>
                     <div class="card-body">
-                        <form action="{{ URL::to('/pelanggan/save_gallery') }}" method="POST" enctype="multipart/form-data">
+                        <form class="formInformasi" action="{{ URL::to('/pelanggan/save_gallery') }}" method="POST" enctype="multipart/form-data">
                             @csrf
 
                             <div class="form-group">
@@ -366,7 +366,7 @@
                                 <input type="file" class="form-control" name="gallery4">
                             </div>
                             <div class="form-group">
-                                <button type="submit" class="btn bg-main text-white">Simpan</button>
+                                <button type="submit" class="btn bg-main text-white btn-simpan">Simpan</button>
                             </div>
                         </form>
                     </div>
@@ -378,6 +378,16 @@
 @endsection
 @section('script')
     <script>
+
+        $('.btn-simpan').on('click',function(e){
+            e.preventDefault();
+            let parentHTML = $(this).parent();
+            let img = $('.loader img').attr('src');
+            let button = '<button type="submit" class="btn bg-main text-white btn-simpan"> <img src="'+img+'" width="30"></button>'
+            parentHTML.html(button);
+            $('.formInformasi').submit();
+        })
+
         $('#liInformasi').addClass('active');
     </script>
 @endsection

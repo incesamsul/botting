@@ -359,3 +359,9 @@ table tr * {
     margin: 0px 0px 0px 10px;
     text-decoration: none;
 }
+
+@media (max-width: 420px) {
+    .btn {
+        margin-top: 5px;
+    }
+}
