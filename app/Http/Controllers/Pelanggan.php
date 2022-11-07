@@ -83,18 +83,35 @@ class Pelanggan extends Controller
 
     public function simpanDomain(Request $request)
     {
+
         $undangan = Undangan::where('id_user', auth()->user()->id);
         if (!$undangan->first()) {
+            $cekDomain = Undangan::where('domain', $request->domain);
+            if ($cekDomain->first()) {
+                return redirect()->back()->with('message', 'domain tidak tersediah, pilih yang lain');
+            }
             Undangan::create([
                 'domain' => $request->domain,
                 'id_user' => auth()->user()->id,
             ]);
+            return redirect()->back()->with('message', 'berhasil membuat domain');
         } else {
-            $undangan->update([
-                'domain' => $request->domain,
-            ]);
-        }
 
-        return redirect()->back()->with('message', 'berhasil membuat domain');
+            if ($undangan->first()->domain == $request->domain) {
+                $undangan->update([
+                    'domain' => $request->domain,
+                ]);
+                return redirect()->back()->with('message', 'berhasil mengupdate domain');
+            } else {
+                $cekDomain = Undangan::where('domain', $request->domain);
+                if ($cekDomain->first()) {
+                    return redirect()->back()->with('message', 'domain tidak tersediah, pilih yang lain');
+                }
+                $undangan->update([
+                    'domain' => $request->domain,
+                ]);
+                return redirect()->back()->with('message', 'berhasil mengupdate domain');
+            }
+        }
     }
 }
