@@ -10,6 +10,11 @@ use Illuminate\Support\Str;
 use function PHPUnit\Framework\isNull;
 
 
+function getNickName($name)
+{
+    $arrName = explode(" ", $name);
+    return $arrName[0];
+}
 
 function convertNoHp($noHp)
 {

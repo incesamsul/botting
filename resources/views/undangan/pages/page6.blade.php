@@ -5,7 +5,7 @@
     <div class="mempelai-wrapper ">
         <img src="{{ asset('turnjs/invitation/pics/bg/' . $nama_tema . '/bingkai.png?p') }}" class="mempelai-img-frame">
         <img src="{{ asset('data/informasi/' . $informasi->foto_mempelai_wanita) }}" class="mempelai-img">
-        <span class="mempelai text-{{ $nama_tema }}">{{ $informasi->nama_mempelai_wanita }} </span>
+        <span class="mempelai text-{{ $nama_tema }}">{{ getNickName($informasi->nama_mempelai_wanita) }} </span>
         <span class="text-secondary">Anak dari</span>
         <span class="text-secondary mt-2">{{ $informasi->nama_ayah_mempelai_wanita }}</span>
         <span class="text-secondary">&</span>

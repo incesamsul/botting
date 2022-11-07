@@ -46,8 +46,8 @@
         <div class="tamu-wrapper">
             <div class="sambutan-tamu text-center p-4">
                 <span>HARI PERNIKAHAN</span>
-                    <h3>{{ $informasi ? $informasi->nama_mempelai_pria : '' }} &
-                        {{ $informasi ? $informasi->nama_mempelai_wanita : '' }}</h3>
+                    <h3>{{ $informasi ? getNickName($informasi->nama_mempelai_pria) : '' }} &
+                        {{ $informasi ? getNickName($informasi->nama_mempelai_wanita) : '' }}</h3>
                     <p>Kepada Bapak/Ibu/Saudara/i</p>
                     <strong>{{ $tamu->nama_tamu }}</strong>
                     <small><i>Mohon maaf bila ada kesalahan dalam penulisan nama/gelar</i></small>
@@ -146,8 +146,8 @@
                         <div class="cover-effect-left"></div>
                         <div class="overlay-effect text-{{ $nama_tema }}">
                             <span>HARI PERNIKAHAN</span>
-                            <h3>{{ $informasi ? $informasi->nama_mempelai_pria : '' }} &
-                                {{ $informasi ? $informasi->nama_mempelai_wanita : '' }}</h3>
+                            <h3>{{ $informasi ? getNickName($informasi->nama_mempelai_pria) : '' }} &
+                                {{ $informasi ? getNickName($informasi->nama_mempelai_wanita) : '' }}</h3>
                             <span>{{ $informasi ? $informasi->tgl_akad : '' }}</span>
                         </div>
                         <img src="{{ asset('turnjs/invitation/pics/bg/' . $nama_tema . '/bg2.png') }}" alt="">
@@ -162,8 +162,8 @@
                         <div class="cover-effect-left"></div>
                         <div class="overlay-effect text-{{ $nama_tema }}">
                             <span>HARI PERNIKAHAN</span>
-                            <h3>{{ $informasi ? $informasi->nama_mempelai_pria : '' }} &
-                                {{ $informasi ? $informasi->nama_mempelai_wanita : '' }}</h3>
+                            <h3>{{ $informasi ? getNickName($informasi->nama_mempelai_pria) : '' }} &
+                                {{ $informasi ? getNickName($informasi->nama_mempelai_wanita) : '' }}</h3>
                             <span>{{ $informasi ? $informasi->tgl_akad : '' }}</span>
                         </div>
                         <img src="{{ asset('turnjs/invitation/pics/bg/' . $nama_tema . '/bg2.png') }}" alt="">
@@ -175,8 +175,8 @@
                         <div class="cover-effect-left"></div>
                         <div class="overlay-effect text-{{ $nama_tema }}">
                             <span>HARI PERNIKAHAN</span>
-                            <h3>{{ $informasi ? $informasi->nama_mempelai_pria : '' }} &
-                                {{ $informasi ? $informasi->nama_mempelai_wanita : '' }}</h3>
+                            <h3>{{ $informasi ? getNickName($informasi->nama_mempelai_pria) : '' }} &
+                                {{ $informasi ? getNickName($informasi->nama_mempelai_wanita) : '' }}</h3>
                             <span>{{ $informasi ? $informasi->tgl_akad : '' }}</span>
                         </div>
                         <img src="{{ asset('turnjs/invitation/pics/bg/' . $nama_tema .'/bg2.png') }}" alt="">
@@ -191,8 +191,8 @@
                         <div class="cover-effect-left"></div>
                         <div class="overlay-effect text-{{ $nama_tema }}">
                             <span>HARI PERNIKAHAN</span>
-                            <h3>{{ $informasi ? $informasi->nama_mempelai_pria : '' }} &
-                                {{ $informasi ? $informasi->nama_mempelai_wanita : '' }}</h3>
+                            <h3>{{ $informasi ? getNickName($informasi->nama_mempelai_pria) : '' }} &
+                                {{ $informasi ? getNickName($informasi->nama_mempelai_wanita) : '' }}</h3>
                             <span>{{ $informasi ? $informasi->tgl_akad : '' }}</span>
                         </div>
                         <img src="{{ asset('turnjs/invitation/pics/bg/' . $nama_tema . '/bg2.png') }}" alt="">
