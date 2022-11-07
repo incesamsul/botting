@@ -8,8 +8,8 @@
         <div class="carousel-item active">
           <div class="container ">
             <div class="row">
-              <div class="col-md-6">
-                <div class="detail-box">
+              <div class="col-md-6 ">
+                <div class="detail-box d-flex align-items-center justify-content-center  flex-column">
                     <h5>Scan qrcode di undanganmu</h5>
                     <div style="width: 80%" id="reader"></div>
                 </div>
