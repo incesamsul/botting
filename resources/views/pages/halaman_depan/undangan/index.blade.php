@@ -31,6 +31,9 @@
 </head>
 <body>
 
+    <div class="loader">
+        <img src="{{ asset('img/svg_animated/loading.svg') }}" alt="loading">
+    </div>
 
     <audio autoplay controls id="backsound" hidden>
         <source src="{{ asset('turnjs/audio/backsound.mp3') }}" type="audio/mpeg">

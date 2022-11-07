@@ -1,4 +1,7 @@
-/* Steve jobs' book */
+$(function() {
+    $('.loader').addClass('hidden');
+})
+
 
 function updateDepth(book, newPage) {
 
@@ -35,11 +38,11 @@ function loadPage(page) {
     let namaTema = tema;
     let idUser = id_user;
     $.ajax({
-         url: '/get_undangan_pages/page' + page ,
-         data: {
+        url: '/get_undangan_pages/page' + page,
+        data: {
             nama_tema: namaTema,
             id_user: idUser
-         }
+        }
     }).
     done(function(pageHtml) {
         $('.sj-book .p' + page).html(pageHtml.replace('samples/steve-jobs/', ''));
