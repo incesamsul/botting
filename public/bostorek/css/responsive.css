@@ -34,6 +34,9 @@
 @media (max-width: 480px) {}
 
 @media (max-width: 420px) {
+    .navbar-brand {
+        margin-left: 0px !important;
+    }
     .navbar-brand img {
         margin-top: 0px;
         width: 140px;
@@ -42,7 +45,11 @@
     .custom_nav-container .navbar-toggler span {
         background-color: #34364A;
     }
+    .row .col-sm-4 {
+        margin-top: 0px !important;
+    }
     .card {
+        margin-top: 0px !important;
         margin-bottom: 10px;
     }
     #how_to_make img {
