@@ -36,6 +36,9 @@
                 <li class="" id="liTema"><a class="nav-link" href="{{ URL::to('/admin/tema') }}"><i
                             class="fas fa-image"></i> <span>tema</span></a></li>
 
+                <li class="" id="liUndangan"><a class="nav-link" href="{{ URL::to('/admin/undangan') }}"><i
+                            class="fas fa-list"></i> <span>Udangan</span></a></li>
+
                 {{-- END OF MENU ADMIN --}}
             @endif
             @if (auth()->user()->role == 'pelanggan')

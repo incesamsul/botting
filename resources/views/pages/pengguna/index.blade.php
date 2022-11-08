@@ -8,7 +8,7 @@
                 <div class="card-header d-flex  justify-content-between">
                     <h4>Data Pengguna</h4>
                     <div class="table-tools d-flex justify-content-around ">
-                        <input type="text" class="form-control card-form-header mr-3" placeholder="Cari Data Pengguna ..." id="cari-data-pengguna">
+                        <input type="text" class="form-control card-form-header mr-3" placeholder="Cari Data Pengguna ..." id="searchbox">
                         <select class="custom-select form-control mr-3" id="filter-data-pengguna">
                             <option value="" selected>Filter</option>
                             <option value=""></option>
@@ -17,18 +17,25 @@
                     </div>
                 </div>
                 <div class="card-body p-0">
-                    <table class="table table-striped table-hover table-user table-action-hover">
+                    <table class="table table-striped table-hover table-user table-action-hover" id="table-data">
                         <thead>
                             <tr>
                                 <th width="5%" class="sorting" data-sorting_type="asc" data-column_name="id" style="cursor: pointer">ID <span id="id_icon"></span></th>
                                 <td>Nama</td>
                                 <td>Email</td>
                                 <td>Tipe Pengguna</td>
-                                <td></td>
+                                {{-- <td></td> --}}
                             </tr>
                         </thead>
                         <tbody>
-                            {{-- @include('pages.pengguna.users_data') --}}
+                            @foreach ($pengguna as $row)
+                                <tr>
+                                    <td>{{ $loop->iteration }}</td>
+                                    <td>{{ $row->name }}</td>
+                                    <td>{{ $row->email }}</td>
+                                    <td>{{ $row->role }}</td>
+                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
                     <input type="hidden" name="hidden_page" id="hidden_page" value="1" />
@@ -89,8 +96,6 @@
                         <label>Role</label>
                         <select class="form-control" name="tipe_pengguna" id="tipe-pengguna">
                             <option>user</option>
-                            <option>penilai</option>
-                            <option>Administrator</option>
                         </select>
                     </div>
             </div>

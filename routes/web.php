@@ -69,6 +69,7 @@ Route::group(['middleware' => ['auth', 'ceklevel:Administrator']], function () {
         Route::get('/pengguna', [Admin::class, 'pengguna']);
         Route::get('/fetch_data', [Admin::class, 'fetchData']);
         Route::get('/tema', [Admin::class, 'tema']);
+        Route::get('/undangan', [Admin::class, 'undangan']);
         Route::post('/create_tema', [Admin::class, 'createTema']);
 
 

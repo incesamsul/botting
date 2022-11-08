@@ -1,5 +1,6 @@
 $(function() {
     $('.loader').addClass('hidden');
+    $('.loader').remove();
 })
 
 

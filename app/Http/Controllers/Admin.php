@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Percetakan;
 use App\Models\Tema;
+use App\Models\Undangan;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -34,6 +35,12 @@ class Admin extends Controller
     {
         $data['tema'] = Tema::all();
         return view('pages.tema.index', $data);
+    }
+
+    public function undangan()
+    {
+        $data['undangan'] = Undangan::all();
+        return view('pages.undangan.index', $data);
     }
 
 
