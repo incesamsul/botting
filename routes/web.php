@@ -26,6 +26,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route::domain('{subdomain}.botting.id')->group(function () {
+//     Route::get('/', function ($subdomain) {
+//         $data = $subdomain;
+//         return App::call('App\Http\Controllers\Pelanggan@undangan', ['domain' => $data, 'kodeUndangan' => '']);
+//     });
+//     Route::get('/{kode_undangan}', function ($subdomain, $kodeUndangan) {
+//         $data = $subdomain;
+//         $kode_undangan = $kodeUndangan;
+//         return App::call('App\Http\Controllers\Pelanggan@undangan', ['domain' => $data, 'kodeUndangan' => $kode_undangan]);
+//     });
+// });
+
+// Route::domain('botting.id')->group(function () {
+//     Route::get('/', [Home::class, 'beranda']);
+// });
+
+
 
 
 Route::post('/postlogin', [LoginController::class, 'postLogin']);
